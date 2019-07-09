@@ -28,13 +28,6 @@
 
     ```
 
-    Normally, the `config_dir` would be at these locations:
-
-    * in linux: `$HOME/.config/matplotlib`
-
-    * in OSX: `$HOME/.matplotlib`
-
-
   1. Copy and paste `bg_style` file to `config_dir` found at previous
      step.
 
