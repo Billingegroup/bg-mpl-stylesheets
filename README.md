@@ -22,11 +22,11 @@
   1. Use following commands to figure out which matplotlib config directory
     on your system:
 
-    ```
-    >>> import matplotlib
-    >>> config_dir = matplotlib.get_configdir()
+      ```
+      >>> import matplotlib
+      >>> config_dir = matplotlib.get_configdir()
 
-    ```
+      ```
 
   1. Copy and paste `bg_style` file to `config_dir` found at previous
      step.
