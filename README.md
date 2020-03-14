@@ -40,7 +40,7 @@
     plt.rcParams['font.size'] = 18
     (... and so on)
     ```
-* Now you can start writing the plot codes as normal, for example
+* Now you can start writing the plot codes as normal, such as
 
     ```
     fig = plt.figure()
@@ -48,6 +48,8 @@
     ax.plot(x, y)
     fig.savefig('test.pdf')
     ```
+
+* You can also go to the `example` folder and run `plot.py`
 
 * For full reference, please see matplotlib doc:
   https://matplotlib.org/users/dflt_style_changes.html
