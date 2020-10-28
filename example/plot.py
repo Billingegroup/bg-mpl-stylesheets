@@ -1,10 +1,12 @@
 import matplotlib.pyplot as plt
 from diffpy.utils.parsers.loaddata import loadData
+from billinge_style.bg_plt_style import bg_plt_style
+
 #if use stylesheet remotely
-path = 'https://raw.githubusercontent.com/Billingegroup/mpl-stylesheets/master/bg_style'
+# path = 'https://raw.githubusercontent.com/Billingegroup/mpl-stylesheets/master/bg_style'
 #if use stylesheet locally
 # path = '../bg_style'
-plt.style.use(path)
+plt.style.use(bg_plt_style)
 
 #load PDF data
 r, gcalc, dr, dg, gdiff = loadData('./CdSe.fgr').T
