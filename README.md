@@ -1,22 +1,23 @@
 # BillingeGroup mpl-stylesheets
 
-* `matplotlib` can accept stylesheet file that is located remotely or
+* `matplotlib` can accept a manually defined stylesheet file that is located remotely or
   locally.
 
-* To use BillingeGroup stylesheet remotely, simply run following commands at the
-   **begining** of you python session.
+* To use BillingeGroup stylesheet, please install this package first
+
+  1. You can install from source code in this repo by `python setup.py install`.
+  
+  2. Or you can conda install the package from conda-forge.
+
+* Then simply run following commands at the
+   **begining** of you python session whenever you plot.
 
   ```
   >>> import matplotlib.pyplot as plt
-  >>> path = 'https://raw.githubusercontent.com/Billingegroup/mpl-stylesheets/master/bg_style'
-  >>> plt.style.use(path)
+  >>> from billinge_style.bg_plt_style import bg_plt_style
+  >>> plt.style.use(bg_plt_style)
   ```
 
-* If you prefer to use BillingeGroup stylesheet locally, please follow these steps.
-
-  1. Fork and clone the repo to your local computer
-
-  1. replace the variable `path` into the stylesheet file on your local system and run the commands as above.
 
 * If you wish to use BillingeGroup stylesheet as the default style of
   your plots, please follow these steps.
@@ -49,7 +50,7 @@
     fig.savefig('test.pdf')
     ```
 
-* You can also go to the `example` folder and run `plot.py`
+* You can also go to the `example` folder and run `plot.py` for the testing
 
 * For full reference, please see matplotlib doc:
   https://matplotlib.org/users/dflt_style_changes.html
