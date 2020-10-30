@@ -54,6 +54,9 @@
 
 ![example_plot](example/plot.png?raw=true)
 
+* The full group color cycle is shown in the following along with the color codes:
+
+![color_cycle](example/color_cycle.png?raw=true)
 
 * For full reference, please see matplotlib doc:
   https://matplotlib.org/users/dflt_style_changes.html
