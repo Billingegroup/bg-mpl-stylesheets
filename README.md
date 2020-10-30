@@ -50,7 +50,9 @@
     fig.savefig('test.pdf')
     ```
 
-* You can also go to the `example` folder and run `plot.py` for the testing
+* You can also go to the `example` folder and run `plot.py` for the testing. The example plot would be like this:
+![example_plot](example/plot.png?raw=true)
+
 
 * For full reference, please see matplotlib doc:
   https://matplotlib.org/users/dflt_style_changes.html
