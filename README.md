@@ -51,6 +51,7 @@
     ```
 
 * You can also go to the `example` folder and run `plot.py` for the testing. The example plot would be like this:
+
 ![example_plot](example/plot.png?raw=true)
 
 
