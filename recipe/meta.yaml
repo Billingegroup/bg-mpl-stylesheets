@@ -1,0 +1,37 @@
+{% set reponame = "mpl-stylesheets" %}
+{% set packagename = "billinge_style" %}
+{% set version = "0.1.0" %}
+{% set sha256 = "b7b3412a4137df3ef60ba93740614039819615265e4e833c8b1a7de15b631d19" %}
+
+package:
+  name: {{ packagename|lower }}
+  version: {{ version }}
+
+source:
+  url: http://github.com/billingegroup/{{ reponame }}/releases/download/{{ version }}/{{ packagename }}-{{ version }}.tar.gz
+  sha256: {{ sha256 }}
+
+build:
+  noarch: python
+  number: 0
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
+
+requirements:
+  build:
+    - python >=3
+    - pip
+  run:
+    - python >=3
+
+about:
+  home: https://github.com/billingegroup/mpl-stylesheets
+  license: MIT
+  license_family: MIT
+  license_file: LICENSE.txt
+  summary: 'Billinge Group Research Styles'
+
+  dev_url: https://github.com/billingegroup/mpl-stylesheets
+
+extra:
+  recipe-maintainers:
+    - dragonyanglong
