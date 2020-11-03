@@ -2,10 +2,9 @@ import matplotlib.pyplot as plt
 from diffpy.utils.parsers.loaddata import loadData
 from billinge_style.bg_plt_style import bg_plt_style
 import numpy as np
-#if use stylesheet remotely
-# path = 'https://raw.githubusercontent.com/Billingegroup/mpl-stylesheets/master/bg_style'
-#if use stylesheet locally
-# path = '../bg_style'
+
+#please read the README about how to install the group plot style package 
+#and how to import it and use
 plt.style.use(bg_plt_style)
 
 
