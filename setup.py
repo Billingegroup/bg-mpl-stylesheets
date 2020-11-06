@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 
 setuptools.setup(
-    name="bg_mpl_stylesheet", # Replace with your own name
+    name="bg_mpl_stylesheet",  # Replace with your own name
     version="0.1.0",
     author="Simon J. L. Billinge",
     author_email="sb2896@columbia.edu",
@@ -19,7 +19,7 @@ setuptools.setup(
         'Programming Language :: Python :: 3',
         'Operating System :: OS Independent',
     ],
-    data_files = [("", ["LICENSE.txt"])],
+    data_files=[("", ["LICENSE.txt"])],
     python_requires='>=3.6',
     zip_safe=False,
 )
