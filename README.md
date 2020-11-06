@@ -14,8 +14,8 @@
 
   ```
   >>> import matplotlib.pyplot as plt
-  >>> from billinge_style.bg_plt_style import bg_plt_style
-  >>> plt.style.use(bg_plt_style)
+  >>> from bg_mpl_stylesheet.bg_mpl_stylesheet import bg_mpl_style
+  >>> plt.style.use(bg_mpl_style)
   ```
 
 
@@ -30,7 +30,7 @@
       >>> config_dir = matplotlib.get_configdir()
       ```
 
-  1. Copy and paste `bg_style` file to `config_dir` found at previous
+  1. Copy and paste `bg_mpl_stylesheet` file to `config_dir` found at previous
      step.
 
 
