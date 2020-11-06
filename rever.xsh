@@ -1,4 +1,4 @@
-$PROJECT = 'billinge_style'
+$PROJECT = 'bg_mpl_stylesheet'
 $ACTIVITIES = ['version_bump', 'changelog', 'tag', 'push_tag', 'ghrelease', 'conda_forge']
 
 $VERSION_BUMP_PATTERNS = [
@@ -7,7 +7,7 @@ $VERSION_BUMP_PATTERNS = [
     ]
 $CHANGELOG_FILENAME = 'v0.1.0.rst'
 $CHANGELOG_IGNORE = ['TEMPLATE.rst']
-$PUSH_TAG_REMOTE = 'git@github.com:billingegroup/mpl-stylesheets.git'
+$PUSH_TAG_REMOTE = 'git@github.com:Billingegroup/bg-mpl-stylesheets.git'
 
 $GITHUB_ORG = 'billingeGroup'
-$GITHUB_REPO = 'mpl-stylesheets'
+$GITHUB_REPO = 'bg-mpl-stylesheets'
