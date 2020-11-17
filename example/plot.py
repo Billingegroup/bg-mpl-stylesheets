@@ -23,4 +23,4 @@ ax.set_xlabel('r ($\mathrm{\AA}$)')
 ax.set_ylabel('G ($\mathrm{\AA}$$^{-2}$)')
 
 plt.show()
-# fig.savefig('plot.png')
+# fig.savefig('plot.pdf')
