@@ -191,7 +191,7 @@ lines.solid_capstyle : round   ## butt|round|projecting
 ## The font.size property is the default font size for text, given in pts.
 ## 10 pt is the standard value.
 
-font.family          : arial
+font.family          : sans-serif
 #font.style          : normal
 #font.variant        : normal
 #font.weight         : normal
@@ -203,7 +203,7 @@ font.family          : arial
 ## small, medium, large, x-large, xx-large, larger, or smaller
 font.size            : 15
 #font.serif          : DejaVu Serif, Bitstream Vera Serif, Computer Modern Roman, New Century Schoolbook, Century Schoolbook L, Utopia, ITC Bookman, Bookman, Nimbus Roman No9 L, Times New Roman, Times, Palatino, Charter, serif
-#font.sans-serif     : DejaVu Sans, Bitstream Vera Sans, Computer Modern Sans Serif, Lucida Grande, Verdana, Geneva, Lucid, Arial, Helvetica, Avant Garde, sans-serif
+font.sans-serif      : cm
 #font.cursive        : Apple Chancery, Textile, Zapf Chancery, Sand, Script MT, Felipa, cursive
 #font.fantasy        : Comic Sans MS, Chicago, Charcoal, ImpactWestern, Humor Sans, xkcd, fantasy
 #font.monospace      : DejaVu Sans Mono, Bitstream Vera Sans Mono, Computer Modern Typewriter, Andale Mono, Nimbus Mono L, Courier New, Courier, Fixed, Terminal, monospace
@@ -226,7 +226,8 @@ text.usetex          : True  ## use latex for all text handling. The following f
                               ## matplotlib mailing list
 #text.latex.unicode : False ## use "ucs" and "inputenc" LaTeX packages for handling
                             ## unicode strings.
-#text.latex.preamble :      ## IMPROPER USE OF THIS FEATURE WILL LEAD TO LATEX FAILURES
+text.latex.preamble :       \usepackage[cm]{sfmath}
+                            ## IMPROPER USE OF THIS FEATURE WILL LEAD TO LATEX FAILURES
                             ## AND IS THEREFORE UNSUPPORTED. PLEASE DO NOT ASK FOR HELP
                             ## IF THIS FEATURE DOES NOT DO WHAT YOU EXPECT IT TO.
                             ## preamble is a comma separated list of LaTeX statements
