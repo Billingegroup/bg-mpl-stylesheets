@@ -19,8 +19,8 @@ ax.plot(r, gdiff + offset)  # Difference
 ax.axhline(y=offset, color='k', linestyle='--')
 
 ax.set_xlim(2.0, 20.0)  # set x-axis lower and upper limits
-ax.set_xlabel('r ($\mathrm{\AA}$)')
-ax.set_ylabel('G ($\mathrm{\AA}$$^{-2}$)')
+ax.set_xlabel("r ($\mathrm{\AA}$)")
+ax.set_ylabel("G ($\mathrm{\AA}$$^{-2}$)")
 
 plt.show()
-# fig.savefig('plot.png')
+# fig.savefig('plot.pdf')
