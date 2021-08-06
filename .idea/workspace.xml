@@ -20,6 +20,12 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$USER_HOME$/anaconda3/envs/rever_env/lib/python3.9/site-packages/rever/activities" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="PyConsoleOptionsProvider">
@@ -63,7 +69,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1628192585394</updated>
-      <workItem from="1628192590558" duration="573000" />
+      <workItem from="1628192590558" duration="1167000" />
     </task>
     <servers />
   </component>
@@ -79,22 +85,22 @@
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="2657" y="281" width="424" height="479" key="FileChooserDialogImpl/1920.0.1920.1080/0.0.1920.1055@1920.0.1920.1080" timestamp="1628192795484" />
-    <state width="1878" height="347" key="GridCell.Tab.0.bottom" timestamp="1628193012188">
+    <state width="1878" height="347" key="GridCell.Tab.0.bottom" timestamp="1628254101430">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1878" height="347" key="GridCell.Tab.0.bottom/1920.0.1920.1080/0.0.1920.1055@1920.0.1920.1080" timestamp="1628193012188" />
-    <state width="1878" height="347" key="GridCell.Tab.0.center" timestamp="1628193012188">
+    <state width="1878" height="347" key="GridCell.Tab.0.bottom/1920.0.1920.1080/0.0.1920.1055@1920.0.1920.1080" timestamp="1628254101430" />
+    <state width="1878" height="347" key="GridCell.Tab.0.center" timestamp="1628254101430">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1878" height="347" key="GridCell.Tab.0.center/1920.0.1920.1080/0.0.1920.1055@1920.0.1920.1080" timestamp="1628193012188" />
-    <state width="1878" height="347" key="GridCell.Tab.0.left" timestamp="1628193012188">
+    <state width="1878" height="347" key="GridCell.Tab.0.center/1920.0.1920.1080/0.0.1920.1055@1920.0.1920.1080" timestamp="1628254101430" />
+    <state width="1878" height="347" key="GridCell.Tab.0.left" timestamp="1628254101430">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1878" height="347" key="GridCell.Tab.0.left/1920.0.1920.1080/0.0.1920.1055@1920.0.1920.1080" timestamp="1628193012188" />
-    <state width="1878" height="347" key="GridCell.Tab.0.right" timestamp="1628193012188">
+    <state width="1878" height="347" key="GridCell.Tab.0.left/1920.0.1920.1080/0.0.1920.1055@1920.0.1920.1080" timestamp="1628254101430" />
+    <state width="1878" height="347" key="GridCell.Tab.0.right" timestamp="1628254101430">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>
-    <state width="1878" height="347" key="GridCell.Tab.0.right/1920.0.1920.1080/0.0.1920.1055@1920.0.1920.1080" timestamp="1628193012188" />
+    <state width="1878" height="347" key="GridCell.Tab.0.right/1920.0.1920.1080/0.0.1920.1055@1920.0.1920.1080" timestamp="1628254101430" />
     <state x="2384" y="161" key="SettingsEditor" timestamp="1628192773142">
       <screen x="1920" y="0" width="1920" height="1080" />
     </state>

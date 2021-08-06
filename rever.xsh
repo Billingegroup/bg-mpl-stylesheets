@@ -19,10 +19,10 @@ $CHANGELOG_FILENAME = 'CHANGELOG.rst'
 $CHANGELOG_IGNORE = ['TEMPLATE.rst']
 
 # tag, push_tag activity
-$PUSH_TAG_REMOTE = 'git@github.com:connorjbracy/bg-mpl-stylesheets.git'
+$PUSH_TAG_REMOTE = 'git@github.com:Billingegroup/bg-mpl-stylesheets.git'
 
 # ghrelease activity
-$GITHUB_ORG = 'connorjbracy'
+$GITHUB_ORG = 'Billingegroup'
 $GITHUB_REPO = 'bg-mpl-stylesheets'
 
 # conda_forge activity
