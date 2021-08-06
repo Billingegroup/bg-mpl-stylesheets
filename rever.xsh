@@ -7,9 +7,6 @@ $ACTIVITIES = [
     'ghrelease',
     'conda_forge',
 ]
-# The user account to use for the push/git commands
-$PUSH_USER = 'connorjbracy'
-$REPO_NAME = 'bg-mpl-stylesheets'
 
 # version_bump activity
 $VERSION_BUMP_PATTERNS = [
@@ -22,11 +19,11 @@ $CHANGELOG_FILENAME = 'CHANGELOG.rst'
 $CHANGELOG_IGNORE = ['TEMPLATE.rst']
 
 # tag, push_tag activity
-$PUSH_TAG_REMOTE = 'git@github.com:$PUSH_USER/$REPO_NAME.git'
+$PUSH_TAG_REMOTE = 'git@github.com:connorjbracy/bg-mpl-stylesheets.git'
 
 # ghrelease activity
-$GITHUB_ORG = $PUSH_USER
-$GITHUB_REPO = $REPO_NAME
+$GITHUB_ORG = 'connorjbracy'
+$GITHUB_REPO = 'bg-mpl-stylesheets'
 
 # conda_forge activity
 $FORGE_FEEDSTOCK_ORG = $GITHUB_ORG
