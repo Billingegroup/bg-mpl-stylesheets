@@ -6,7 +6,7 @@
 * To use BillingeGroup stylesheet, please install this package first
 
   1. You can install from source code in this repo by `python setup.py install`.
-  
+
   1. Or you can conda install the package from conda-forge.
 
 * Next, make sure you have some LaTeX package on your computer for matplotlib to use.
