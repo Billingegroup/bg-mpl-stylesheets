@@ -1,11 +1,10 @@
 import matplotlib.pyplot as plt
-from diffpy.utils.parsers.loaddata import loadData
-from billinge_style.bg_plt_style import bg_plt_style
+from bg_mpl_stylesheet.bg_mpl_stylesheet import bg_mpl_style
 import numpy as np
 
 # please read the README about how to install the group plot style package
 # and how to import it and use
-plt.style.use(bg_plt_style)
+plt.style.use(bg_mpl_style)
 
 
 x = np.arange(0, 1, 0.01)
@@ -19,7 +18,7 @@ cycle = plt.rcParams['axes.prop_cycle'].by_key()['color']
 
 # plot the color cycles and corresponding color codes.
 for (i, c) in enumerate(cycle):
-    ax.plot(x, y+offset*i, label=str(c), color=c, linestyle='-')
+    ax.plot(x, y+offset*i, label='\\{}'.format(c), color=c, linestyle='-')
 
 
 ax.set_xlim(0, 2.0)  # set x-axis lower and upper limits
