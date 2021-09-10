@@ -26,7 +26,7 @@ $GITHUB_ORG = 'Billingegroup'
 $GITHUB_REPO = 'bg-mpl-stylesheets'
 
 # conda_forge activity
-$FORGE_FEEDSTOCK_ORG = $GITHUB_ORG
+$FORGE_FEEDSTOCK_ORG = 'conda-forge'
 $FORGE_FEEDSTOCK = 'git@github.com:$FORGE_FEEDSTOCK_ORG/$PROJECT-feedstock.git'
 $FORGE_PROTOCOL = 'ssh'
 $FORGE_SOURCE_URL = 'https://github.com/$GITHUB_ORG/$GITHUB_REPO/releases/download/$VERSION/$PROJECT-$VERSION.tar.gz'
