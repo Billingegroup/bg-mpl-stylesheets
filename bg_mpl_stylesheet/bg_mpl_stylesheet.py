@@ -83,7 +83,6 @@ bg_mpl_style = {
     # figure properties #
     #####################
     'figure.facecolor': 'w',
-    'figure.autolayout': True,
 
     'savefig.bbox': 'tight'
 }
