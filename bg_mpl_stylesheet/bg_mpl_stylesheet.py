@@ -1,4 +1,5 @@
 from matplotlib import cycler
+from distutils.spawn import find_executable
 
 bg_mpl_style = {
     ####################
@@ -26,13 +27,6 @@ bg_mpl_style = {
                         'Avant Garde',
                         'sans-serif',
                         'cm'],
-
-    ###################
-    # text properties #
-    ###################
-    'text.usetex': True,
-    'text.latex.preamble': [r'\usepackage[cm]{sfmath}'],
-    'mathtext.fontset': 'stixsans',
 
     ###################
     # axes properties #
@@ -86,3 +80,17 @@ bg_mpl_style = {
 
     'savefig.bbox': 'tight'
 }
+
+if find_executable('latex'):
+
+    tex = {
+        ###################
+        # text properties #
+        ###################
+        'text.usetex': True,
+        'text.latex.preamble': [r'\usepackage[cm]{sfmath}'],
+        'mathtext.fontset': 'stixsans'
+    }
+
+    bg_mpl_style.update(tex)
+    
