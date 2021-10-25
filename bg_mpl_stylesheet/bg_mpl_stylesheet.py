@@ -93,4 +93,4 @@ if find_executable('latex'):
     }
 
     bg_mpl_style.update(tex)
-    
+
