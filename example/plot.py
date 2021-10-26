@@ -22,5 +22,6 @@ ax.set_xlim(2.0, 20.0)  # set x-axis lower and upper limits
 ax.set_xlabel("r ($\mathrm{\AA}$)")
 ax.set_ylabel("G ($\mathrm{\AA}$$^{-2}$)")
 
+plt.tight_layout()
 plt.show()
 # fig.savefig('plot.pdf')
