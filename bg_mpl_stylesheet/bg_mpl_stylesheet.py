@@ -92,7 +92,7 @@ if find_executable('latex'):
         # text properties #
         ###################
         'text.usetex': True,
-        'text.latex.preamble': [r'\usepackage[cm]{sfmath}'],
+        'text.latex.preamble': r'\usepackage[cm]{sfmath}',
         'mathtext.fontset': 'stixsans'
     }
 
