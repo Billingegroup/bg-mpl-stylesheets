@@ -3,15 +3,13 @@
 * `matplotlib` can accept a manually defined stylesheet file that is located remotely or
   locally.
 
-* To use BillingeGroup stylesheet, please install this package first
+* To use the BillingeGroup stylesheet, please install this package first
 
   1. You can install from source code in this repo by `python setup.py install`.
 
   1. Or you can conda install the package from conda-forge.
 
-* Next, make sure you have some LaTeX package on your computer for matplotlib to use.
-
-  * For some users, installing the base LaTeX package is not sufficient. If you encounter a rendering error referencing LaTeX, please check your LaTeX installation.
+* By default the package uses LaTeX fonts for mathematical symbols. This feature requires a Latex package on your computer.  It is not required for the use of the styel-sheet but gives better results for things like angstrom symbols.
 
   * For Ubuntu users, you can try [this suggestion](https://stackoverflow.com/questions/11354149/python-unable-to-render-tex-in-matplotlib/37218925#37218925):
 
@@ -20,7 +18,7 @@
   ```
 
 
-* Then simply run following commands at the
+* Then simply place the following commands at the
    **begining** of you python session whenever you plot.
 
   ```
@@ -41,7 +39,7 @@
       config_dir = matplotlib.get_configdir()
       ```
 
-  1. Copy and paste `bg_mpl_stylesheet` file to `config_dir` found at previous
+  1. Copy and paste `bg_mpl_stylesheet` file to the  `config_dir` found at previous
      step.
 
     * NOTE: If you installed bg-mpl-stylesheets via conda, or do not have the `bg_mpl_stylesheet` file for any other reason, you can (re)download it [here](https://github.com/Billingegroup/bg-mpl-stylesheets/blob/master/bg_mpl_stylesheet/bg_mpl_stylesheet).
@@ -63,7 +61,7 @@
     plt.show()
     ```
 
-* You can also go to the `example` folder and run `plot.py` for the testing. The example plot would be like this:
+* You can also go to the `example` folder and run `plot.py` for testing. The example plot would be like this:
 
 ![example_plot](example/plot.png?raw=true)
 
