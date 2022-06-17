@@ -6,7 +6,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="bg_mpl_stylesheet",  # Replace with your own name
-    version='0.2.5',
+    version='0.2.6',
     author="Simon J. L. Billinge",
     author_email="sb2896@columbia.edu",
     description="A package for using Billinge group style files",
