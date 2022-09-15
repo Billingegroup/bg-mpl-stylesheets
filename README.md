@@ -5,9 +5,9 @@
 
 * To use the BillingeGroup stylesheet, please install this package first
 
-  1. You can install from source code in this repo by `python setup.py install`.
+  1. It is recommended to install using conda: `conda install -c conda-forge bg-mpl-stylesheets`
 
-  1. Or you can conda install the package from conda-forge.
+  2. Else, you can install from source code in this repo by `python setup.py install`.
 
 * By default the package uses LaTeX fonts for mathematical symbols. This feature requires a Latex package on your computer.  It is not required for the use of the styel-sheet but gives better results for things like angstrom symbols.
 
