@@ -90,3 +90,7 @@
 
 * For full reference, please see matplotlib doc:
   https://matplotlib.org/users/dflt_style_changes.html
+
+## Contributing
+    
+    Please feel encouraged to contribute your own style-sheets to the package and make your beautiful styles more widely available.  To do so, fork the repo, create a branch and make a Pull Request.
