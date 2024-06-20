@@ -81,6 +81,10 @@ bg_mpl_style = {
     'savefig.bbox': 'tight'
 }
 
+## TODO:
+#    Instead, run a subprocess LaTeX processing on a file
+#    containing each of the characters we typically care
+#    about and switch based on the success of that call.
 if find_executable('latex'):
 
     tex = {
