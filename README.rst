@@ -185,7 +185,7 @@ Citation
 ![color_cycle](example/color_cycle.png?raw=true)
 
 * For full reference, please see matplotlib doc:
-  https://matplotlib.org/users/dflt_style_changes.html
+  https://matplotlib.org/stable/users/prev_whats_new/dflt_style_changes.html
 
 ## Contributing
     
