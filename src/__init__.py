@@ -7,7 +7,7 @@
 # File coded by: Billinge Group members and community contributors.
 #
 # See GitHub contributions for a more detailed list of contributors.
-# https://github.com/Billingegroup/bg-mpl-stylesheets/graphs/contributors
+# https://github.com/diffpy/diffpy.pdfmorph/graphs/contributors
 #
 # See LICENSE.rst for license information.
 #
@@ -15,10 +15,9 @@
 
 """A package for using Billinge group style files"""
 
-# package version
-from bg-mpl-stylesheets.version import __version__
 
-# silence the pyflakes syntax checker
-assert __version__ or True
+from pkgutil import extend_path
+
+__path__ = extend_path(__path__, __name__)
 
 # End of file
