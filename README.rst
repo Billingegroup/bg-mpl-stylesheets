@@ -39,7 +39,7 @@ A package for using Billinge group style files
 
 * LONGER DESCRIPTION HERE
 
-For more information about the bg-mpl-stylesheets library, please consult our `online documentation <https://Billingegroup.github.io/bg-mpl-stylesheets>`_.
+For more information about the bg-mpl-stylesheets library, please consult our `online documentation <https://github.com/Billingegroup/bg-mpl-stylesheets>`_.
 
 Citation
 --------
@@ -124,8 +124,8 @@ Not that the ``rcParams`` are global. It can get very confusing if these are upd
         import matplotlib.pyplot as plt
 
         @mpl.rc_context({'lines.linewidth': 1, 'axes.linewidth': 0.7, 'xtick.major.size':
-                0.7, 'xtick.major.width': 0.7,  'xtick.labelsize': 5, 'legend.frameon':                      False, 
-                'legend.loc': 'best', 'font.size': 5, 'axes.labelsize': 5, 'ytick.left':                      False,
+                0.7, 'xtick.major.width': 0.7,  'xtick.labelsize': 5, 'legend.frameon': False, 
+                'legend.loc': 'best', 'font.size': 5, 'axes.labelsize': 5, 'ytick.left': False,
                 'ytick.labelleft': False, 'ytick.right': False
              })
         def all_plot(x-array, yarray):
