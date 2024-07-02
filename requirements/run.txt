@@ -1,0 +1,5 @@
+matplotlib
+numpy
+diffpy.utils
+bg-mpl-stylesheets
+distutils
