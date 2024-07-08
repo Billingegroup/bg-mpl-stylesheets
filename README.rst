@@ -51,6 +51,10 @@ If you use bg-mpl-stylesheets in a scientific publication, we would like you to 
 Installation
 ------------
 
+Install ``bg-mpl-stylesheets`` into your venv from the conda-forge channel on anaconda/miniconda
+
+The package includes examples to help you get started. If you would like to run these examples, create a conda environment to do this. 
+
 The preferred method is to use `Miniconda Python
 <https://docs.conda.io/projects/miniconda/en/latest/miniconda-install.html>`_
 and install from the "conda-forge" channel of Conda packages.
@@ -67,6 +71,7 @@ The following creates and activates a new environment named ``bg-mpl-stylesheets
 
 Then, to fully install ``bg-mpl-stylesheets`` in our active environment, run ::
 
+        conda install --file requirements/examples.txt
         conda install bg-mpl-stylesheets
 
 Another option is to use ``pip`` to download and install the latest release from
