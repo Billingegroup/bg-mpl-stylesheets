@@ -21,7 +21,3 @@ v0.1.0
 * Rever version bump patterns
 
 **Security:** None
-
-
-
-

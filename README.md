@@ -18,9 +18,9 @@
   from bg_mpl_stylesheet.bg_mpl_stylesheet import <style-sheet-name>
   plt.style.use(<style-sheet-name>)
   ```
-  
+
   for example
-  
+
   ```
   from bg_mpl_stylesheet.bg_mpl_stylesheet import bg_mpl_style
   plt.style.use(bg_mpl_style)
@@ -48,9 +48,9 @@
     plt.rcParams['font.size'] = 18
     (... and so on)
     ```
-    
-    Not that the `rcParams` are global.  It can get very confusing if these are updated everywhere in the code.  It is much better to make local updates to their values by defining functions for your plots and using the @matplotlib.style.context() decorator, e.g., 
-    
+
+    Not that the `rcParams` are global.  It can get very confusing if these are updated everywhere in the code.  It is much better to make local updates to their values by defining functions for your plots and using the @matplotlib.style.context() decorator, e.g.,
+
     ```
     import matplotlib.pyplot as plt
 
@@ -65,8 +65,8 @@
         plt.show()
         return
     ```
-    This will confine the style updates to just apply in the function namespace.  
-    
+    This will confine the style updates to just apply in the function namespace.
+
 * You can also update style parameters locally by using the matplotlib style context manager, for example
 
     ```
@@ -143,5 +143,5 @@
   https://matplotlib.org/users/dflt_style_changes.html
 
 ## Contributing
-    
+
     Please feel encouraged to contribute your own style-sheets to the package and make your beautiful styles more widely available.  To do so, fork the repo, create a branch and make a Pull Request.

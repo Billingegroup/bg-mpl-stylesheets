@@ -1,5 +1,6 @@
 import matplotlib.pyplot as plt
 from diffpy.utils.parsers.loaddata import loadData
+
 from bg_mpl_stylesheet.bg_mpl_stylesheet import bg_mpl_style
 
 # please read the README about how to install the group plot style package

@@ -1,5 +1,6 @@
-from matplotlib import cycler
 from distutils.spawn import find_executable
+
+from matplotlib import cycler
 
 bg_mpl_style = {
     ####################
@@ -87,7 +88,6 @@ bg_mpl_style = {
 }
 
 if find_executable("latex"):
-
     tex = {
         ###################
         # text properties #
