@@ -15,8 +15,10 @@
 
 """A package for using Billinge group style files"""
 
-from pkgutil import extend_path
+# package version
+from bg_mpl_stylesheets.version import __version__
 
-__path__ = extend_path(__path__, __name__)
+# silence the pyflakes syntax checker
+assert __version__ or True
 
 # End of file
