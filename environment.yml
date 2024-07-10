@@ -1,0 +1,6 @@
+name: bg-mpl-stylesheets
+channels:
+  - conda-forge
+dependencies:
+  - python=3
+  - pip
