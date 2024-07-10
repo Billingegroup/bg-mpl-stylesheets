@@ -1,4 +1,4 @@
 pytest
-coverage
 codecov
+coverage
 matplotlib-base
