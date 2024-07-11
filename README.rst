@@ -1,22 +1,12 @@
-|Icon| |title|_
-===============
-
-.. |title| replace:: bg-mpl-stylesheets
-.. _title: https://bg-mpl-stylesheets.github.io/bg-mpl-stylesheets
-
-.. |Icon| image:: https://avatars.githubusercontent.com/bg-mpl-stylesheets
-        :target: https://bg-mpl-stylesheets.github.io/bg-mpl-stylesheets
-        :height: 100px
+bg-mpl-stylesheets
+==================
 
 |PyPi| |Forge| |PythonVersion| |PR|
 
-|CI| |Codecov| |Black| |Tracking|
+|Codecov| |Black| |Tracking|
 
 .. |Black| image:: https://img.shields.io/badge/code_style-black-black
         :target: https://github.com/psf/black
-
-.. |CI| image:: https://github.com/bg-mpl-stylesheets/bg-mpl-stylesheets/actions/workflows/main.yml/badge.svg
-        :target: https://github.com/bg-mpl-stylesheets/bg-mpl-stylesheets/actions/workflows/main.yml
 
 .. |Codecov| image:: https://codecov.io/gh/bg-mpl-stylesheets/bg-mpl-stylesheets/branch/main/graph/badge.svg
         :target: https://codecov.io/gh/bg-mpl-stylesheets/bg-mpl-stylesheets
@@ -38,8 +28,6 @@
 A package for using Billinge group style files
 
 * bg-mpl-stylesheets is a Python software package that creates a standardized matplotlib figure format. This includes specialized fonts, figure border, color cycle, tick parameters, and more. 
-
-For more information about the bg-mpl-stylesheets library, please consult our `online documentation <https://bg-mpl-stylesheets.github.io/bg-mpl-stylesheets>`_.
 
 Citation
 --------
@@ -245,4 +233,4 @@ Before contribuing, please read our `Code of Conduct <https://github.com/bg-mpl-
 Contact
 -------
 
-For more information on bg-mpl-stylesheets please visit the project `web-page <https://bg-mpl-stylesheets.github.io/>`_ or email Prof. Simon Billinge at sb2896@columbia.edu.
+For more information on bg-mpl-stylesheets please email Prof. Simon Billinge at sb2896@columbia.edu.
