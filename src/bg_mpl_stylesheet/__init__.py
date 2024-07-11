@@ -16,7 +16,7 @@
 """A package for using Billinge group style files"""
 
 # package version
-from bg_mpl_stylesheets.version import __version__
+from bg_mpl_stylesheet.version import __version__
 
 # silence the pyflakes syntax checker
 assert __version__ or True
