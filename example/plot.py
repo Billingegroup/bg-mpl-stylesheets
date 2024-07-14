@@ -8,7 +8,7 @@ from bg_mpl_stylesheet.bg_mpl_stylesheet import bg_mpl_style
 plt.style.use(bg_mpl_style)
 
 # load PDF data
-r, gcalc, dr, dg, gdiff = loadData("example/CdSe.fgr").T
+r, gcalc, dr, dg, gdiff = loadData("example/CdSe_data.fgr").T
 
 fig = plt.figure()
 ax = fig.add_subplot(1, 1, 1)
