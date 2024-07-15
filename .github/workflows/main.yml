@@ -19,7 +19,7 @@ jobs:
       - name: check out bg-mpl-stylesheets
         uses: actions/checkout@v3
         with:
-          repository: bg-mpl-stylesheets/bg-mpl-stylesheets
+          repository: billingegroup/bg-mpl-stylesheets
           path: .
           fetch-depth: 0  # avoid shallow clone with no tags
 
