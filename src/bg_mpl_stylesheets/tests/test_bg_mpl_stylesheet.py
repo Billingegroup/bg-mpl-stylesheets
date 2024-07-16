@@ -1,8 +1,15 @@
-from distutils.spawn import find_executable
-
 from matplotlib import cycler
 
-bg_mpl_style = {
+from bg_mpl_stylesheets import bg_mpl_stylesheet
+
+
+def test_bg_mpl_stylesheet():
+    actual = bg_mpl_stylesheet.update_style_with_latex()
+    expected = style
+    assert expected == actual
+
+
+style = {
     ####################
     # lines properties #
     ####################
@@ -86,16 +93,3 @@ bg_mpl_style = {
     "figure.facecolor": "w",
     "savefig.bbox": "tight",
 }
-
-if find_executable("latex"):
-
-    tex = {
-        ###################
-        # text properties #
-        ###################
-        "text.usetex": True,
-        "text.latex.preamble": r"\usepackage[cm]{sfmath}",
-        "mathtext.fontset": "stixsans",
-    }
-
-    bg_mpl_style.update(tex)
