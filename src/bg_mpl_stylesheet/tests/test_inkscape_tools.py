@@ -1,10 +1,10 @@
 from pathlib import Path
 
-from bg_mpl_stylesheet import inkscape_tools
+from bg_mpl_stylesheet.inkscape_tools import get_all_layer_ids
 
 
-def test_get_all_layer_ids(tmp_path):
-    input_svg = Path(tmp_path) / "test.svg"
+def test_get_all_layer_ids(user_filesystem):
+    input_svg = Path(user_filesystem) / "test.svg"
     expected = ["layer1", "layer2"]
-    actual = inkscape_tools.get_all_layer_ids(input_svg)
+    actual = get_all_layer_ids(input_svg)
     assert expected == actual

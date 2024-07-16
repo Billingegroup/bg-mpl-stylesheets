@@ -68,6 +68,7 @@ def get_all_layer_ids(svg_file):
 
     layer_ids = []
     for layer in root.findall(".//svg:g", namespace):
+        print(layer.attrib)
         if "{http://www.inkscape.org/namespaces/inkscape}label" in layer.attrib:
             layer_ids.append(layer.attrib["id"])
 
