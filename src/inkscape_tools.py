@@ -45,6 +45,19 @@ def export_layers_to_pdf(svg_file, output_pdf, layers_to_include):
 
 
 def get_all_layer_ids(svg_file):
+    """
+    The layer IDs are the names of the layers, but this python script will return them all
+
+    Parameters
+    ----------
+    svg_file string
+      The path to the svg
+
+    Returns
+    -------
+    The layer IDs as a list of strings
+
+    """
     from xml.etree import ElementTree as ET
 
     tree = ET.parse(svg_file)
