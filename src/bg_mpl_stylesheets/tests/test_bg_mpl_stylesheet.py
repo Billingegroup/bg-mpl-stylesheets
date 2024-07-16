@@ -1,6 +1,6 @@
 from matplotlib import cycler
 
-from bg_mpl_stylesheet import bg_mpl_stylesheet
+from bg_mpl_stylesheets import bg_mpl_stylesheet
 
 
 def test_bg_mpl_stylesheet():

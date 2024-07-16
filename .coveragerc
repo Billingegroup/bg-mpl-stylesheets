@@ -1,6 +1,6 @@
 [run]
 source =
-    bg_mpl_stylesheets
+    bg_mpl_stylesheet
 [report]
 omit =
     */python?.?/*
