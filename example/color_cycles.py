@@ -1,6 +1,5 @@
 import matplotlib.pyplot as plt
 import numpy as np
-
 from bg_mpl_stylesheet.bg_mpl_stylesheet import bg_mpl_style
 
 # please read the README about how to install the group plot style package
