@@ -62,7 +62,7 @@ Another option is to use ``pip`` to download and install the latest release from
 `Python Package Index <https://pypi.python.org>`_.
 To install using ``pip`` into your ``bg-mpl-stylesheets_env`` environment, we will also have to install dependencies ::
 
-        pip install -r https://raw.githubusercontent.com/bg-mpl-stylesheets/bg-mpl-stylesheets/main/requirements/run.txt
+        pip install -r https://raw.githubusercontent.com/billingegroup/bg-mpl-stylesheets/main/requirements/run.txt
 
 and then install the package ::
 
@@ -82,13 +82,13 @@ By default the package uses LaTeX fonts for mathematical symbols. This feature r
 
 To use the stylesheet, near the beginning your python script type ::
         
-        from bg_mpl_stylesheet.bg_mpl_stylesheet import <style-sheet-name>
-        plt.style.use(<style-sheet-name>)
+        from bg_mpl_stylesheets.styles import all_styles
+        plt.style.use(all_styles["<style-name>"])
 
 for example ::
 
-        from bg_mpl_stylesheet.bg_mpl_stylesheet import bg_mpl_style
-        plt.style.use(bg_mpl_style)
+        from bg_mpl_stylesheets.styles import all_styles
+        plt.style.use(all_styles["bg-style"])
 
 If you wish to use BillingeGroup stylesheet as the default style for all your plots, please follow these steps.
 
@@ -97,7 +97,7 @@ If you wish to use BillingeGroup stylesheet as the default style for all your pl
         import matplotlib
         config_dir = matplotlib.get_configdir()
 
-2. Copy and paste the ``bg_mpl_stylesheet`` file to the ``config_dir`` found in the previous step.
+2. Copy and paste the ``bg_mpl_stylesheet`` file from this repo to the ``config_dir`` found in the previous step.
 
 Overriding the default styles
 -----------------------------
@@ -132,7 +132,7 @@ You can also update style parameters locally by using the matplotlib style conte
             plt.ylabel('some numbers')
         plt.show()
 
-Here are a snapshot of values in bg-mpl-style sheet which you may override with ``rc.parms`` to fine tune things: ::
+Here are a snapshot of values in ``all_styles["bg_style"]`` sheet which you may override with ``rc.parms`` to fine tune things: ::
 
         'lines.linewidth':       2.50,
         'lines.markeredgewidth': 0.25,
