@@ -35,3 +35,6 @@ v0.1.0
 **Fixed:**
 
 * package structure to new group template
+
+0.3.1
+=====
