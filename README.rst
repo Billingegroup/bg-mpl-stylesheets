@@ -88,7 +88,7 @@ To use the stylesheet, near the beginning your python script type ::
 for example ::
 
         from bg_mpl_stylesheets.styles import all_styles
-        plt.style.use(all_styles["bg-style"])
+        plt.style.use(all_styles["bg_style"])
 
 If you wish to use BillingeGroup stylesheet as the default style for all your plots, please follow these steps.
 
