@@ -38,3 +38,14 @@ v0.1.0
 
 0.3.1
 =====
+
+0.3.2
+=====
+
+**Changed:**
+
+* key name in the style dictionary from all_styles["bg_style"] to all_styles["bg-style"]
+
+**Fixed:**
+
+* URLs referring to the organization in README.md
