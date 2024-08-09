@@ -4,7 +4,7 @@
 
 **Changed:**
 
-* <news item>
+* key name in the style dictionary from all_styles["bg_style"] to all_styles["bg-style"]
 
 **Deprecated:**
 
@@ -16,7 +16,6 @@
 
 **Fixed:**
 
-* key name in the style dictionary from all_styles["bg-style"] to all_styles["bg_style"] in README.md
 * URLs referring to the organization in README.md
 
 **Security:**

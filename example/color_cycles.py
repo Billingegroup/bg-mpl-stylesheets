@@ -5,7 +5,7 @@ from bg_mpl_stylesheets.styles import all_styles
 
 # please read the README about how to install the group plot style package
 # and how to import it and use
-plt.style.use(all_styles["bg_style"])
+plt.style.use(all_styles["bg-style"])
 
 
 x = np.arange(0, 1, 0.01)

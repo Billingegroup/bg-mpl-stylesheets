@@ -88,7 +88,7 @@ To use the stylesheet, near the beginning your python script type ::
 for example ::
 
         from bg_mpl_stylesheets.styles import all_styles
-        plt.style.use(all_styles["bg_style"])
+        plt.style.use(all_styles["bg-style"])
 
 If you wish to use BillingeGroup stylesheet as the default style for all your plots, please follow these steps.
 
@@ -132,7 +132,7 @@ You can also update style parameters locally by using the matplotlib style conte
             plt.ylabel('some numbers')
         plt.show()
 
-Here are a snapshot of values in ``all_styles["bg_style"]`` sheet which you may override with ``rc.parms`` to fine tune things: ::
+Here are a snapshot of values in ``all_styles["bg-style"]`` sheet which you may override with ``rc.parms`` to fine tune things: ::
 
         'lines.linewidth':       2.50,
         'lines.markeredgewidth': 0.25,
