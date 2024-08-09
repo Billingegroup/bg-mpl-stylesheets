@@ -17,13 +17,13 @@ bg-mpl-stylesheets is developed by Billinge Group
 and its community contributors.
 
 For a detailed list of contributors see
-https://github.com/bg-mpl-stylesheets/bg-mpl-stylesheets/graphs/contributors.
+https://github.com/Billingegroup/bg-mpl-stylesheets/graphs/contributors.
 
 ============
 Installation
 ============
 
-See the `README <https://github.com/bg-mpl-stylesheets/bg-mpl-stylesheets#installation>`_
+See the `README <https://github.com/Billingegroup/bg-mpl-stylesheets#installation>`_
 file included with the distribution.
 
 =================
