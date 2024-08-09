@@ -8,8 +8,8 @@ bg-mpl-stylesheets
 .. |Black| image:: https://img.shields.io/badge/code_style-black-black
         :target: https://github.com/psf/black
 
-.. |Codecov| image:: https://codecov.io/gh/bg-mpl-stylesheets/bg-mpl-stylesheets/branch/main/graph/badge.svg
-        :target: https://codecov.io/gh/bg-mpl-stylesheets/bg-mpl-stylesheets
+.. |Codecov| image:: https://codecov.io/gh/Billingegroup/bg-mpl-stylesheets/branch/main/graph/badge.svg
+        :target: https://codecov.io/gh/Billingegroup/bg-mpl-stylesheets
 
 .. |Forge| image:: https://img.shields.io/conda/vn/conda-forge/bg-mpl-stylesheets
         :target: https://anaconda.org/conda-forge/bg-mpl-stylesheets
@@ -23,7 +23,7 @@ bg-mpl-stylesheets
         :target: https://pypi.org/project/bg-mpl-stylesheets/
 
 .. |Tracking| image:: https://img.shields.io/badge/issue_tracking-github-blue
-        :target: https://github.com/bg-mpl-stylesheets/bg-mpl-stylesheets/issues
+        :target: https://github.com/Billingegroup/bg-mpl-stylesheets/issues
 
 A package for using Billinge group style files
 
@@ -34,7 +34,7 @@ Citation
 
 If you use bg-mpl-stylesheets in a scientific publication, we would like you to cite this package as
 
-        bg-mpl-stylesheets Package, https://github.com/bg-mpl-stylesheets/bg-mpl-stylesheets
+        bg-mpl-stylesheets Package, https://github.com/Billingegroup/bg-mpl-stylesheets
 
 Installation
 ------------
@@ -69,7 +69,7 @@ and then install the package ::
         pip install bg-mpl-stylesheets
 
 If you prefer to install from sources, after installing the dependencies, obtain the source archive from
-`GitHub <https://github.com/bg-mpl-stylesheets/bg-mpl-stylesheets/>`_. Once installed, ``cd`` into your ``bg-mpl-stylesheets`` directory
+`GitHub <https://github.com/Billingegroup/bg-mpl-stylesheets/>`_. Once installed, ``cd`` into your ``bg-mpl-stylesheets`` directory
 and run the following ::
 
         pip install .
@@ -132,7 +132,7 @@ You can also update style parameters locally by using the matplotlib style conte
             plt.ylabel('some numbers')
         plt.show()
 
-Here are a snapshot of values in ``all_styles["bg_style"]`` sheet which you may override with ``rc.parms`` to fine tune things: ::
+Here are a snapshot of values in ``all_styles["bg-style"]`` sheet which you may override with ``rc.parms`` to fine tune things: ::
 
         'lines.linewidth':       2.50,
         'lines.markeredgewidth': 0.25,
@@ -205,7 +205,7 @@ Support and Contribute
 
 `Diffpy user group <https://groups.google.com/g/diffpy-users>`_ is the discussion forum for general questions and discussions about the use of bg-mpl-stylesheets. Please join the bg-mpl-stylesheets users community by joining the Google group. The bg-mpl-stylesheets project welcomes your expertise and enthusiasm!
 
-If you see a bug or want to request a feature, please `report it as an issue <https://github.com/bg-mpl-stylesheets/bg-mpl-stylesheets/issues>`_ and/or `submit a fix as a PR <https://github.com/bg-mpl-stylesheets/bg-mpl-stylesheets/pulls>`_. You can also post it to the `Diffpy user group <https://groups.google.com/g/diffpy-users>`_. 
+If you see a bug or want to request a feature, please `report it as an issue <https://github.com/Billingegroup/bg-mpl-stylesheets/issues>`_ and/or `submit a fix as a PR <https://github.com/Billingegroup/bg-mpl-stylesheets/pulls>`_. You can also post it to the `Diffpy user group <https://groups.google.com/g/diffpy-users>`_. 
 
 Feel free to fork the project and contribute. To install bg-mpl-stylesheets
 in a development mode, with its sources being directly used by Python
@@ -228,7 +228,9 @@ trying to commit again.
 
 Improvements and fixes are always appreciated.
 
-Before contribuing, please read our `Code of Conduct <https://github.com/bg-mpl-stylesheets/bg-mpl-stylesheets/blob/main/CODE_OF_CONDUCT.rst>`_.
+Before contribuing, please read our `Code of Conduct <https://github.com/Billingegroup/bg-mpl-stylesheets/blob/main/CODE_OF_CONDUCT.rst>`_.
+
+
 
 Contact
 -------

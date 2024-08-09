@@ -4,7 +4,7 @@ from bg_mpl_stylesheets import styles
 
 
 def test_update_style_with_latex():
-    actual = styles.update_style_with_latex(styles.all_styles["bg_style"])
+    actual = styles.update_style_with_latex(styles.all_styles["bg-style"])
     expected = expected_style
     assert expected == actual
 

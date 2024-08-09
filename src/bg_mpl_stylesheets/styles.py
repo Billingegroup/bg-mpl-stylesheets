@@ -102,7 +102,7 @@ def update_style_with_latex(style):
     return style
 
 
-all_styles = {"bg_style": bg_style}
+all_styles = {"bg-style": bg_style}
 
 for key, style in all_styles.items():
     all_styles.update({key: update_style_with_latex(style)})
