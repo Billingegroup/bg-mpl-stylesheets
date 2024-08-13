@@ -150,7 +150,7 @@ Here are a snapshot of values in ``all_styles["bg-style"]`` sheet which you may 
         'axes.edgecolor':  'k',
         'axes.prop_cycle': cycler('color',
                                   ['#0B3C5D', '#B82601', '#1c6b0a', '#328CC1',
-                                   '#a8b6c1', '#D9B310', '#984B43', '#76323F',
+                                   '#a8b6c1', '#D9B310', '#F1BAF2', '#76323F',
                                    '#626E60', '#AB987A', '#C09F80', '#b0b0b0ff']),
         ####################
         # xtick properties #
