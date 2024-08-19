@@ -1,34 +1,34 @@
-def get_colors():
-    return {
-        "bg_blue": "#0B3C5D",
-        "bg_red": "#B82601",
-        "bg_green": "#1c6b0a",
-        "bg_light_blue": "#328CC1",
-        "bg_light_grey": "#a8b6c1",
-        "bg_yellow": "#D9B310",
-        "bg_brown": "#6C5050",
-        "bg_burgundy": "#76323F",
-        "bg_olive_green": "#626E60",
-        "bg_muted_olive": "#918770",
-        "bg_beige": "#C09F80",
-        "bg_grey": "#b0b0b0ff",
-    }
-    
+from enum import Enum
+
+class Colors(str, Enum):
+    BG_BLUE = "#0B3C5D"
+    BG_RED = "#B82601"
+    BG_GREEN = "#1c6b0a"
+    BG_LIGHT_BLUE = "#328CC1"
+    BG_LIGHT_GREY = "#a8b6c1"
+    BG_YELLOW = "#D9B310"
+    BG_BROWN = "#6C5050"
+    BG_BURGUNDY = "#76323F"
+    BG_OLIVE_GREEN = "#626E60"
+    BG_MUTED_OLIVE = "#918770"
+    BG_BEIGE = "#C09F80"
+    BG_GREY = "#b0b0b0ff"
+
+
 def get_bg_colors() -> list[str]:
-    colors = get_colors()
     bg_colors = [
-        colors["bg_blue"],
-        colors["bg_red"],
-        colors["bg_green"],
-        colors["bg_light_blue"],
-        colors["bg_light_grey"],
-        colors["bg_yellow"],
-        colors["bg_brown"],
-        colors["bg_burgundy"],
-        colors["bg_olive_green"],
-        colors["bg_muted_olive"],
-        colors["bg_beige"],
-        colors["bg_grey"],
+        Colors.BG_BLUE,
+        Colors.BG_RED,
+        Colors.BG_GREEN,
+        Colors.BG_LIGHT_BLUE,
+        Colors.BG_LIGHT_GREY,
+        Colors.BG_YELLOW,
+        Colors.BG_BROWN,
+        Colors.BG_BURGUNDY,
+        Colors.BG_OLIVE_GREEN,
+        Colors.BG_MUTED_OLIVE,
+        Colors.BG_BEIGE,
+        Colors.BG_GREY
     ]
     return bg_colors
 
