@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class Colors(str, Enum):
     BG_BLUE = "#0B3C5D"
     BG_RED = "#B82601"
@@ -13,6 +14,7 @@ class Colors(str, Enum):
     BG_MUTED_OLIVE = "#918770"
     BG_BEIGE = "#C09F80"
     BG_GREY = "#b0b0b0ff"
+    # Add more colors as needed
 
 
 def get_bg_colors() -> list[str]:
@@ -28,8 +30,6 @@ def get_bg_colors() -> list[str]:
         Colors.BG_OLIVE_GREEN,
         Colors.BG_MUTED_OLIVE,
         Colors.BG_BEIGE,
-        Colors.BG_GREY
+        Colors.BG_GREY,
     ]
     return bg_colors
-
-
