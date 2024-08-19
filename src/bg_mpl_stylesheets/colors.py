@@ -16,20 +16,6 @@ class Colors(str, Enum):
     BG_GREY = "#b0b0b0ff"
     # Add more colors as needed
 
-
-def get_bg_colors() -> list[str]:
-    bg_colors = [
-        Colors.BG_BLUE,
-        Colors.BG_RED,
-        Colors.BG_GREEN,
-        Colors.BG_LIGHT_BLUE,
-        Colors.BG_LIGHT_GREY,
-        Colors.BG_YELLOW,
-        Colors.BG_BROWN,
-        Colors.BG_BURGUNDY,
-        Colors.BG_OLIVE_GREEN,
-        Colors.BG_MUTED_OLIVE,
-        Colors.BG_BEIGE,
-        Colors.BG_GREY,
-    ]
-    return bg_colors
+    @classmethod
+    def get_bg_colors(cls) -> list[str]:
+        return [color.value for color in cls if color.name.startswith("BG")]
