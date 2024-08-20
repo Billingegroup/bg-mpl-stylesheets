@@ -184,12 +184,30 @@ Here are a snapshot of values in ``all_styles["bg-style"]`` sheet which you may 
         'figure.facecolor': 'w',
         'savefig.bbox': 'tight'
 
+Get individual color and color name
+-----------------------------
+
+You may select a specific hex color code or retrieve the color name from `Colors`: ::
+
+        from bg_mpl_stylesheets.colors import Colors
+
+        # Get hex color code for BG_BLUE
+        bg_blue_hex = Colors.BG_BLUE  # Example: '#0B3C5D'
+
+        # Get color name from hex code
+        color_name = Colors.get_color_name("#0B3C5D")  # Example: 'BG_BLUE'
+
+        # Get a list of all bg-style colors
+        bg_colors = Colors.get_bg_colors()
+
+
 Example code
 ------------
 
 You can also go to the ``example`` folder and run ``plot.py`` for testing. The example plot would be like this:
 
 .. image:: example/plot.png
+        :width: 600px
 
 Colors
 ------
@@ -197,6 +215,7 @@ Colors
 The full group color cycle is shown in the following along with the color codes:
 
 .. image:: example/color_cycle.png
+        :width: 600px
 
 For full reference, please see matplotlib doc: https://matplotlib.org/stable/users/prev_whats_new/dflt_style_changes.html
 
