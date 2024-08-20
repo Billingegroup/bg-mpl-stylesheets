@@ -2,9 +2,6 @@ from distutils.spawn import find_executable
 
 from matplotlib import cycler
 
-from bg_mpl_stylesheets.colors import Colors
-
-bg_colors = Colors.get_bg_colors()
 bg_style = {
     ####################
     # lines properties #
@@ -40,7 +37,23 @@ bg_style = {
     "axes.labelcolor": "k",
     "axes.linewidth": 2.5,
     "axes.edgecolor": "k",
-    "axes.prop_cycle": cycler("color", bg_colors),
+    "axes.prop_cycle": cycler(
+        "color",
+        [
+            "#0B3C5D",
+            "#B82601",
+            "#1c6b0a",
+            "#328CC1",
+            "#a8b6c1",
+            "#D9B310",
+            "#6C5050",
+            "#76323F",
+            "#626E60",
+            "#918770",
+            "#C09F80",
+            "#b0b0b0ff",
+        ],
+    ),
     ####################
     # xtick properties #
     ####################
