@@ -8,16 +8,16 @@ from bg_mpl_stylesheets.colors import Colors
     [
         (Colors.BG_BLUE, "#0B3C5D"),
         (Colors.BG_RED, "#B82601"),
-        (Colors.BG_GREEN, "#1c6b0a"),
+        (Colors.BG_GREEN, "#1C6B0A"),
         (Colors.BG_LIGHT_BLUE, "#328CC1"),
-        (Colors.BG_LIGHT_GREY, "#a8b6c1"),
+        (Colors.BG_LIGHT_GREY, "#A8B6C1"),
         (Colors.BG_YELLOW, "#D9B310"),
         (Colors.BG_BROWN, "#6C5050"),
         (Colors.BG_BURGUNDY, "#76323F"),
         (Colors.BG_OLIVE_GREEN, "#626E60"),
         (Colors.BG_MUTED_OLIVE, "#918770"),
         (Colors.BG_BEIGE, "#C09F80"),
-        (Colors.BG_GREY, "#b0b0b0ff"),
+        (Colors.BG_GREY, "#B0B0B0FF"),
     ],
 )
 def test_color_values(hex, expected_hex):
@@ -44,14 +44,14 @@ def test_color_values(hex, expected_hex):
 )
 def test_get_color_name_from_hex(hex, expected_name):
     # Test retriving the color name based on the hex value
-    assert Colors.get_color_name_from_hex(hex) == expected_name
+    assert Colors.get_color_name(hex) == expected_name
 
 
 def test_get_color_name_from_hex_with_unknown_color():
     # Test returning ValueError when hex value is not in the Colors enum
     unknown_hex_value = "#123456"
     with pytest.raises(ValueError):
-        Colors.get_color_name_from_hex(unknown_hex_value)
+        Colors.get_color_name(unknown_hex_value)
 
 
 def test_bg_colors():

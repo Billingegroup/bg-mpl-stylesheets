@@ -1,8 +1,8 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
-from bg_mpl_stylesheets.styles import all_styles
 from bg_mpl_stylesheets.colors import Colors
+from bg_mpl_stylesheets.styles import all_styles
 
 # please read the README about how to install the group plot style package
 # and how to import it and use
@@ -30,4 +30,4 @@ ax.legend(loc="upper right", frameon=False, prop={"size": 14}, ncol=1)
 
 
 plt.show()
-fig.savefig('color_cycle.png', dpi=300)
+fig.savefig("color_cycle.png", dpi=300)
