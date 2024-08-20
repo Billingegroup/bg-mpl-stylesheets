@@ -17,5 +17,12 @@ class Colors(str, Enum):
     # Add more colors as needed
 
     @classmethod
+    def get_color_name_from_hex(cls, hex_value: str) -> str:
+        for color in cls:
+            if color.value.lower() == hex_value.lower():
+                return color.name
+        raise ValueError("Unknown color name. Please check Colors enum for available colors.")
+
+    @classmethod
     def get_bg_colors(cls) -> list[str]:
         return [color.value for color in cls if color.name.startswith("BG")]
