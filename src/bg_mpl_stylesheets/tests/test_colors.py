@@ -4,7 +4,7 @@ from bg_mpl_stylesheets.colors import Colors
 
 
 @pytest.mark.parametrize(
-    "color, expected_hex",
+    "hex, expected_hex",
     [
         (Colors.BG_BLUE, "#0B3C5D"),
         (Colors.BG_RED, "#B82601"),
@@ -20,8 +20,38 @@ from bg_mpl_stylesheets.colors import Colors
         (Colors.BG_GREY, "#b0b0b0ff"),
     ],
 )
-def test_color_values(color, expected_hex):
-    assert color == expected_hex
+def test_color_values(hex, expected_hex):
+    # Test the hex values of the colors
+    assert hex == expected_hex
+
+
+@pytest.mark.parametrize(
+    "hex, expected_name",
+    [
+        (Colors.BG_BLUE, "BG_BLUE"),
+        (Colors.BG_RED, "BG_RED"),
+        (Colors.BG_GREEN, "BG_GREEN"),
+        (Colors.BG_LIGHT_BLUE, "BG_LIGHT_BLUE"),
+        (Colors.BG_LIGHT_GREY, "BG_LIGHT_GREY"),
+        (Colors.BG_YELLOW, "BG_YELLOW"),
+        (Colors.BG_BROWN, "BG_BROWN"),
+        (Colors.BG_BURGUNDY, "BG_BURGUNDY"),
+        (Colors.BG_OLIVE_GREEN, "BG_OLIVE_GREEN"),
+        (Colors.BG_MUTED_OLIVE, "BG_MUTED_OLIVE"),
+        (Colors.BG_BEIGE, "BG_BEIGE"),
+        (Colors.BG_GREY, "BG_GREY"),
+    ],
+)
+def test_get_color_name_from_hex(hex, expected_name):
+    # Test retriving the color name based on the hex value
+    assert Colors.get_color_name_from_hex(hex) == expected_name
+
+
+def test_get_color_name_from_hex_with_unknown_color():
+    # Test returning ValueError when hex value is not in the Colors enum
+    unknown_hex_value = "#123456"
+    with pytest.raises(ValueError):
+        Colors.get_color_name_from_hex(unknown_hex_value)
 
 
 def test_bg_colors():
