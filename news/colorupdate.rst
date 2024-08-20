@@ -4,8 +4,6 @@
 
 **Changed:**
 
-* Capitalized the hex color codes
-
 **Deprecated:**
 
 * <news item>
@@ -16,7 +14,7 @@
 
 **Fixed:**
 
-* <news item>
+* Capitalized the hex color codes
 
 **Security:**
 
