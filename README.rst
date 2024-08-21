@@ -191,13 +191,13 @@ You may select a specific hex color code or retrieve the color name from `Colors
 
         from bg_mpl_stylesheets.colors import Colors
 
-        # Get the name of the color
+        # Get color name
         Colors.bg_blue.name  # "bg_blue"
 
-        # Get the hex color code  
+        # Get hex color code
         Colors.bg_blue.value  # "#0B3C5D"
 
-        # Get the color name from a hex code
+        # Get color name from a hex code
         color_name = Colors.get_color_name("#0B3C5D")  # Example: 'bg_blue'
 
         # Get a list of all bg-style colors
