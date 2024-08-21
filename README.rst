@@ -149,9 +149,9 @@ Here are a snapshot of values in ``all_styles["bg-style"]`` sheet which you may 
         'axes.linewidth':  2.5,
         'axes.edgecolor':  'k',
         'axes.prop_cycle': cycler('color',
-                                  ['#0B3C5D', '#B82601', '#1C6b0A', '#328CC1',
+                                  ['#0B3C5D', '#B82601', '#1C6B0A', '#328CC1',
                                    '#A8B6C1', '#D9B310', '#6C5050', '#76323F',
-                                   '#626E60', '#918770', '#C09F80', '#B0B0b0FF']),
+                                   '#626E60', '#918770', '#C09F80', '#B0B0B0FF']),
         ####################
         # xtick properties #
         ####################
