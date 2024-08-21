@@ -191,15 +191,41 @@ You may select a specific hex color code or retrieve the color name from `Colors
 
         from bg_mpl_stylesheets.colors import Colors
 
-        # Get hex color code for bg_blue
-        bg_blue_hex = Colors.bg_blue  # Example: '#0B3C5D'
+        # Get the name of the color
+        Colors.bg_blue.name
 
-        # Get color name from hex code
+        # Get the hex color code
+        Colors.bg_blue.value
+
+        # Get the color name from a hex code
         color_name = Colors.get_color_name("#0B3C5D")  # Example: 'bg_blue'
 
         # Get a list of all bg-style colors
         bg_colors = Colors.get_bg_colors()
 
+Use a specific color to plot
+----------------------------
+
+You may select the specific color to plot. ::
+
+        import matplotlib.pyplot as plt
+        from bg_mpl_stylesheets.colors import Colors
+
+        x = [0, 1, 2, 3, 4, 5]
+        y = [i ** 3 for i in x]  # Example data: y = x^3
+
+        # Get hex color code
+        bg_blue_hex = Colors.bg_blue.value
+
+        # Get color name
+        bg_blue_name = Colors.bg_blue.name
+
+        plt.plot(x, y, color=bg_blue_hex, label=f'Color: {bg_blue_name}')
+        plt.title("Plot Example Using Enum Colors")
+        plt.xlabel("X-axis")
+        plt.ylabel("Y-axis")
+        plt.legend()
+        plt.show()
 
 Example code
 ------------
@@ -212,7 +238,7 @@ You can also go to the ``example`` folder and run ``plot.py`` for testing. The e
 Colors
 ------
 
-The full group color cycle is shown in the following along with the color codes:
+Run ``color_cycles.py` to see the full color cycle of the bg-style:
 
 .. image:: example/color_cycle.png
         :width: 600px
