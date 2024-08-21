@@ -4,6 +4,8 @@
 
 **Changed:**
 
+* <news item>
+
 **Deprecated:**
 
 * <news item>
