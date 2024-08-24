@@ -21,8 +21,10 @@ class Colors(str, Enum):
         for color in cls:
             if color.value.lower() == hex_value.lower():
                 return color.name
-        raise ValueError("You have entered an unknown color hex value."
-                         " Please check the src/bg_mpl_stylesheets/colors.py file for the available colors.")
+        raise ValueError(
+            "You have entered an unknown color hex value."
+            " Please check the src/bg_mpl_stylesheets/colors.py file for the available colors."
+        )
 
     @classmethod
     def get_bg_colors(cls) -> list[str]:
