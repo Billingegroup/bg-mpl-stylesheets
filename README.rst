@@ -214,13 +214,7 @@ You may select the specific color to plot: ::
         x = [0, 1, 2, 3, 4, 5]
         y = [i ** 3 for i in x]  # Example data: y = x^3
 
-        # Get hex color code
-        bg_blue_hex = Colors.bg_blue.value
-
-        # Get color name
-        bg_blue_name = Colors.bg_blue.name
-
-        plt.plot(x, y, color=bg_blue_hex, label=f'Color: {bg_blue_name}')
+        plt.plot(x, y, color=Colors.bg_blue.value, label=f'Color: {Colors.bg_blue.name}')
         plt.title("Plot Example Using Enum Colors")
         plt.xlabel("X-axis")
         plt.ylabel("Y-axis")
