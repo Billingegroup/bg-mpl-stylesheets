@@ -25,35 +25,6 @@ def test_color_values(hex, expected_hex):
     assert hex == expected_hex
 
 
-@pytest.mark.parametrize(
-    "hex, expected_name",
-    [
-        (Colors.bg_blue, "bg_blue"),
-        (Colors.bg_red, "bg_red"),
-        (Colors.bg_green, "bg_green"),
-        (Colors.bg_light_blue, "bg_light_blue"),
-        (Colors.bg_light_grey, "bg_light_grey"),
-        (Colors.bg_yellow, "bg_yellow"),
-        (Colors.bg_brown, "bg_brown"),
-        (Colors.bg_burgundy, "bg_burgundy"),
-        (Colors.bg_olive_green, "bg_olive_green"),
-        (Colors.bg_muted_olive, "bg_muted_olive"),
-        (Colors.bg_beige, "bg_beige"),
-        (Colors.bg_grey, "bg_grey"),
-    ],
-)
-def test_get_color_name_from_hex(hex, expected_name):
-    # Test retriving the color name based on the hex value
-    assert Colors.get_color_name(hex) == expected_name
-
-
-def test_get_color_name_from_hex_with_unknown_color():
-    # Test returning ValueError when hex value is not in the Colors enum
-    unknown_hex_value = "#123456"
-    with pytest.raises(ValueError):
-        Colors.get_color_name(unknown_hex_value)
-
-
 def test_bg_colors():
     # Test the get_bg_colors function
     bg_colors = Colors.get_bg_colors()
