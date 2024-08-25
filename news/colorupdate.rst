@@ -1,10 +1,10 @@
 **Added:**
 
-* <news item>
+* `Colors` enum for choosing hex color and selecting color name from hex color
 
 **Changed:**
 
-* change of two colors for higher contrast: ``#AB987A`` to ``#918770`` and ``#984B43`` to ``#6C5050``
+* <news item>
 
 **Deprecated:**
 
@@ -16,7 +16,7 @@
 
 **Fixed:**
 
-* <news item>
+* Capitalized the hex color codes
 
 **Security:**
 

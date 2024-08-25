@@ -149,9 +149,9 @@ Here are a snapshot of values in ``all_styles["bg-style"]`` sheet which you may 
         'axes.linewidth':  2.5,
         'axes.edgecolor':  'k',
         'axes.prop_cycle': cycler('color',
-                                  ['#0B3C5D', '#B82601', '#1c6b0a', '#328CC1',
-                                   '#a8b6c1', '#D9B310', '#6C5050', '#76323F',
-                                   '#626E60', '#918770', '#C09F80', '#b0b0b0ff']),
+                                  ['#0B3C5D', '#B82601', '#1C6B0A', '#328CC1',
+                                   '#A8B6C1', '#D9B310', '#6C5050', '#76323F',
+                                   '#626E60', '#918770', '#C09F80', '#B0B0B0FF']),
         ####################
         # xtick properties #
         ####################
@@ -184,19 +184,67 @@ Here are a snapshot of values in ``all_styles["bg-style"]`` sheet which you may 
         'figure.facecolor': 'w',
         'savefig.bbox': 'tight'
 
+Get individual color and color name
+-----------------------------------
+
+You may select a specific color to plot from `Colors`: ::
+
+        from bg_mpl_stylesheets.colors import Colors
+
+        # Get color name
+        Colors.bg_blue.name  # returns "bg_blue"
+
+        # Get hex color code
+        Colors.bg_blue.value  # returns "#0B3C5D"
+
+        # Get color name from a hex code
+        color_name = Colors(hex).name  # returns: 'bg_blue'
+
+        # Get a list of all bg-style color objects
+        bg_colors = Colors.get_bg_colors()
+
+        # Assign colors to variables with short names
+        og = Colors.bg_olive_green
+        plt.plot(x, y, color=og.value, label=f'Color: {og.name}')
+
+        # if you know the hex and need the name. E.g., you want to make the plot shown here
+        for i, hex in enumerate(cycle):
+            ax.plot(x, y + offset * i, label=Colors(hex).name, color=hex, linestyle="-")
+      
+
+Use a specific color to plot
+----------------------------
+
+You may select the specific color to plot: ::
+
+        import matplotlib.pyplot as plt
+        from bg_mpl_stylesheets.colors import Colors
+
+        x = [0, 1, 2, 3, 4, 5]
+        y = [i ** 3 for i in x]  # Example data: y = x^3
+
+        plt.plot(x, y, color=Colors.bg_blue.value, label=f'Color: {Colors.bg_blue.name}')
+        plt.title("Plot Example Using Enum Colors")
+        plt.xlabel("X-axis")
+        plt.ylabel("Y-axis")
+        plt.legend()
+        plt.show()
+
 Example code
 ------------
 
 You can also go to the ``example`` folder and run ``plot.py`` for testing. The example plot would be like this:
 
 .. image:: example/plot.png
+        :width: 600px
 
 Colors
 ------
 
-The full group color cycle is shown in the following along with the color codes:
+Run ``color_cycles.py` to see the full color cycle of the bg-style:
 
 .. image:: example/color_cycle.png
+        :width: 600px
 
 For full reference, please see matplotlib doc: https://matplotlib.org/stable/users/prev_whats_new/dflt_style_changes.html
 
