@@ -49,3 +49,14 @@ v0.1.0
 **Fixed:**
 
 * URLs referring to the organization in README.md
+
+0.4.0
+=====
+
+**Added:**
+
+* `Colors` enum for choosing hex color and selecting color name from hex color
+
+**Fixed:**
+
+* Capitalized the hex color codes
