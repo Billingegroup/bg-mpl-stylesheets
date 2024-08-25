@@ -185,23 +185,32 @@ Here are a snapshot of values in ``all_styles["bg-style"]`` sheet which you may 
         'savefig.bbox': 'tight'
 
 Get individual color and color name
------------------------------
+-----------------------------------
 
-You may select a specific hex color code or retrieve the color name from `Colors`: ::
+You may select a specific color to plot from `Colors`: ::
 
         from bg_mpl_stylesheets.colors import Colors
 
         # Get color name
-        Colors.bg_blue.name  # "bg_blue"
+        Colors.bg_blue.name  # returns "bg_blue"
 
         # Get hex color code
-        Colors.bg_blue.value  # "#0B3C5D"
+        Colors.bg_blue.value  # returns "#0B3C5D"
 
         # Get color name from a hex code
-        color_name = Colors.get_color_name("#0B3C5D")  # Example: 'bg_blue'
+        color_name = Colors(hex).name  # returns: 'bg_blue'
 
-        # Get a list of all bg-style colors
+        # Get a list of all bg-style color objects
         bg_colors = Colors.get_bg_colors()
+
+        # Assign colors to variables with short names
+        og = Colors.bg_olive_green
+        plt.plot(x, y, color=og.value, label=f'Color: {og.name}')
+
+        # if you know the hex and need the name. E.g., you want to make the plot shown here
+        for i, hex in enumerate(cycle):
+            ax.plot(x, y + offset * i, label=Colors(hex).name, color=hex, linestyle="-")
+      
 
 Use a specific color to plot
 ----------------------------
