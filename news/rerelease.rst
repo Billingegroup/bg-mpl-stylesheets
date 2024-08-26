@@ -13,7 +13,7 @@
 
 **Removed:**
 
-* <news item>
+* duplicate pre-commit GitHub workflow
 
 **Fixed:**
 
