@@ -47,3 +47,18 @@ v0.1.0
 
 * Rever integration
 * Rever version bump patterns
+
+0.4.0
+=====
+
+**Added:**
+
+* `Colors` enum for choosing  a bg color by name
+
+**Removed:**
+
+* duplicate pre-commit GitHub workflow
+
+**Fixed:**
+
+* Capitalized the hex color codes
