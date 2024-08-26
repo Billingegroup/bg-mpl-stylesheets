@@ -241,7 +241,7 @@ You can also go to the ``example`` folder and run ``plot.py`` for testing. The e
 Colors
 ------
 
-Run ``color_cycles.py` to see the full color cycle of the bg-style:
+Run ``color_cycles.py`` to see the full color cycle of the bg-style:
 
 .. image:: example/color_cycle.png
         :width: 600px
