@@ -62,3 +62,6 @@ v0.1.0
 **Fixed:**
 
 * Capitalized the hex color codes
+
+0.4.0
+=====
