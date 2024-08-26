@@ -2,8 +2,32 @@
 Release Notes
 =============
 
+0.3.2
+=====
+
+**Changed:**
+
+* key name in the style dictionary from all_styles["bg_style"] to all_styles["bg-style"]
+
+**Fixed:**
+
+* URLs referring to the organization in README.md
+
+0.3.1
+=====
+
+**Added:**
+
+* inskape_tools.py module with python helper functions for scripting inkscape tasks
+* function in inkscape_tools.py to export a list of layers from an svg file.  Can help with beamer animations.
+
+**Fixed:**
+
+* package structure to new group template
+
+
 v0.1.0
-====================
+=======
 
 **Added:**
 
@@ -23,40 +47,3 @@ v0.1.0
 
 * Rever integration
 * Rever version bump patterns
-
-0.3.0
-=====
-
-**Added:**
-
-* inskape_tools.py module with python helper functions for scripting inkscape tasks
-* function in inkscape_tools.py to export a list of layers from an svg file.  Can help with beamer animations.
-
-**Fixed:**
-
-* package structure to new group template
-
-0.3.1
-=====
-
-0.3.2
-=====
-
-**Changed:**
-
-* key name in the style dictionary from all_styles["bg_style"] to all_styles["bg-style"]
-
-**Fixed:**
-
-* URLs referring to the organization in README.md
-
-0.4.0
-=====
-
-**Added:**
-
-* `Colors` enum for choosing hex color and selecting color name from hex color
-
-**Fixed:**
-
-* Capitalized the hex color codes
