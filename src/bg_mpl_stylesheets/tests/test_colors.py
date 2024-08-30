@@ -18,6 +18,7 @@ from bg_mpl_stylesheets.colors import Colors
         (Colors.bg_muted_olive, "#918770"),
         (Colors.bg_beige, "#C09F80"),
         (Colors.bg_grey, "#B0B0B0FF"),
+        (Colors.columbia_blue, "#B9D9EB"),
     ],
 )
 def test_color_values(hex, expected_hex):
