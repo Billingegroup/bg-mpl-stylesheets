@@ -65,3 +65,10 @@ v0.1.0
 
 0.4.0
 =====
+
+0.4.1
+=====
+
+**Added:**
+
+* Columbia blue (#B9D9EB) as columbia_blue in Colors
