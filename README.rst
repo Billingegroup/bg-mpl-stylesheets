@@ -214,7 +214,7 @@ You may select a specific color to plot from `Colors`: ::
 Color list
 ----------------
 
-Here are available colors in ``Colors`` : ::
+Here are available colors in ``Colors``: ::
 
     bg_blue = "#0B3C5D"
     bg_red = "#B82601"
