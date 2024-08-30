@@ -14,6 +14,7 @@ class Colors(str, Enum):
     bg_muted_olive = "#918770"
     bg_beige = "#C09F80"
     bg_grey = "#B0B0B0FF"
+    columbia_blue = "#B9D9EB"
     # Add more colors as needed
 
     @classmethod
