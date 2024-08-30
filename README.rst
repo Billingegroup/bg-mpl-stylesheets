@@ -211,6 +211,24 @@ You may select a specific color to plot from `Colors`: ::
         for i, hex in enumerate(cycle):
             ax.plot(x, y + offset * i, label=Colors(hex).name, color=hex, linestyle="-")
       
+Color list
+----------------
+
+Here are available colors in ``Colors``: ::
+
+    bg_blue = "#0B3C5D"
+    bg_red = "#B82601"
+    bg_green = "#1C6B0A"
+    bg_light_blue = "#328CC1"
+    bg_light_grey = "#A8B6C1"
+    bg_yellow = "#D9B310"
+    bg_brown = "#6C5050"
+    bg_burgundy = "#76323F"
+    bg_olive_green = "#626E60"
+    bg_muted_olive = "#918770"
+    bg_beige = "#C09F80"
+    bg_grey = "#B0B0B0FF"
+    columbia_blue = "#B9D9EB"
 
 Use a specific color to plot
 ----------------------------
