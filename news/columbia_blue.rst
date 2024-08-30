@@ -1,6 +1,6 @@
 **Added:**
 
-* Columiba blue (#B9D9EB) in Colors
+* Columbia blue (#B9D9EB) as columbia_blue in Colors
 
 **Changed:**
 
