@@ -211,7 +211,7 @@ You may select a specific color to plot from `Colors`: ::
         for i, hex in enumerate(cycle):
             ax.plot(x, y + offset * i, label=Colors(hex).name, color=hex, linestyle="-")
       
-Available colors
+Color list
 ----------------
 
 Here are available colors in ``Colors`` : ::
