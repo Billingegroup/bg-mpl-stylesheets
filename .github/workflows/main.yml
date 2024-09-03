@@ -44,7 +44,7 @@ jobs:
           conda activate test
           conda install --file requirements/run.txt
           conda install --file requirements/test.txt
-          pip install .
+          pip install . --no-deps
       - name: Validate bg-mpl-stylesheets
         shell: bash -l {0}
         run: |
