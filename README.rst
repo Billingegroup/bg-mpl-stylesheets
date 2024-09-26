@@ -79,7 +79,7 @@ and run the following ::
 
         pip install .
 
-sage
+Usage
 -----
 ``matplotlib`` can accept a manually defined stylesheet file that is located remotely or locally.
 
