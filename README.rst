@@ -1,15 +1,25 @@
-bg-mpl-stylesheets
-==================
+|Icon| |title|_
+===============
+
+.. |title| replace:: bg-mpl-stylesheets
+.. _title: https://billingegroup.github.io/bg-mpl-stylesheets
+
+.. |Icon| image:: https://avatars.githubusercontent.com/billingegroup
+        :target: https://billingegroup.github.io/bg-mpl-stylesheets
+        :height: 100px
 
 |PyPi| |Forge| |PythonVersion| |PR|
 
-|Codecov| |Black| |Tracking|
+|CI| |Codecov| |Black| |Tracking|
 
 .. |Black| image:: https://img.shields.io/badge/code_style-black-black
         :target: https://github.com/psf/black
 
-.. |Codecov| image:: https://codecov.io/gh/Billingegroup/bg-mpl-stylesheets/branch/main/graph/badge.svg
-        :target: https://codecov.io/gh/Billingegroup/bg-mpl-stylesheets
+.. |CI| image:: https://github.com/billingegroup/bg-mpl-stylesheets/actions/workflows/matrix-and-codecov-on-merge-to-main.yml/badge.svg
+        :target: https://github.com/billingegroup/bg-mpl-stylesheets/actions/workflows/matrix-and-codecov-on-merge-to-main.yml
+
+.. |Codecov| image:: https://codecov.io/gh/billingegroup/bg-mpl-stylesheets/branch/main/graph/badge.svg
+        :target: https://codecov.io/gh/billingegroup/bg-mpl-stylesheets
 
 .. |Forge| image:: https://img.shields.io/conda/vn/conda-forge/bg-mpl-stylesheets
         :target: https://anaconda.org/conda-forge/bg-mpl-stylesheets
@@ -23,7 +33,7 @@ bg-mpl-stylesheets
         :target: https://pypi.org/project/bg-mpl-stylesheets/
 
 .. |Tracking| image:: https://img.shields.io/badge/issue_tracking-github-blue
-        :target: https://github.com/Billingegroup/bg-mpl-stylesheets/issues
+        :target: https://github.com/billingegroup/bg-mpl-stylesheets/issues
 
 A package for using Billinge group style files
 
@@ -55,26 +65,21 @@ The following creates and activates a new environment named ``bg-mpl-stylesheets
 
 Then, to fully install ``bg-mpl-stylesheets`` in our active environment, run ::
 
-        conda install --file requirements/examples.txt
         conda install bg-mpl-stylesheets
 
 Another option is to use ``pip`` to download and install the latest release from
 `Python Package Index <https://pypi.python.org>`_.
-To install using ``pip`` into your ``bg-mpl-stylesheets_env`` environment, we will also have to install dependencies ::
-
-        pip install -r https://raw.githubusercontent.com/billingegroup/bg-mpl-stylesheets/main/requirements/run.txt
-
-and then install the package ::
+To install using ``pip`` into your ``bg-mpl-stylesheets_env`` environment, type ::
 
         pip install bg-mpl-stylesheets
 
 If you prefer to install from sources, after installing the dependencies, obtain the source archive from
-`GitHub <https://github.com/Billingegroup/bg-mpl-stylesheets/>`_. Once installed, ``cd`` into your ``bg-mpl-stylesheets`` directory
+`GitHub <https://github.com/billingegroup/bg-mpl-stylesheets/>`_. Once installed, ``cd`` into your ``bg-mpl-stylesheets`` directory
 and run the following ::
 
         pip install .
 
-Usage
+sage
 -----
 ``matplotlib`` can accept a manually defined stylesheet file that is located remotely or locally.
 
@@ -271,7 +276,7 @@ Support and Contribute
 
 `Diffpy user group <https://groups.google.com/g/diffpy-users>`_ is the discussion forum for general questions and discussions about the use of bg-mpl-stylesheets. Please join the bg-mpl-stylesheets users community by joining the Google group. The bg-mpl-stylesheets project welcomes your expertise and enthusiasm!
 
-If you see a bug or want to request a feature, please `report it as an issue <https://github.com/Billingegroup/bg-mpl-stylesheets/issues>`_ and/or `submit a fix as a PR <https://github.com/Billingegroup/bg-mpl-stylesheets/pulls>`_. You can also post it to the `Diffpy user group <https://groups.google.com/g/diffpy-users>`_. 
+If you see a bug or want to request a feature, please `report it as an issue <https://github.com/billingegroup/bg-mpl-stylesheets/issues>`_ and/or `submit a fix as a PR <https://github.com/billingegroup/bg-mpl-stylesheets/pulls>`_. You can also post it to the `Diffpy user group <https://groups.google.com/g/diffpy-users>`_. 
 
 Feel free to fork the project and contribute. To install bg-mpl-stylesheets
 in a development mode, with its sources being directly used by Python
@@ -294,11 +299,9 @@ trying to commit again.
 
 Improvements and fixes are always appreciated.
 
-Before contribuing, please read our `Code of Conduct <https://github.com/Billingegroup/bg-mpl-stylesheets/blob/main/CODE_OF_CONDUCT.rst>`_.
-
-
+Before contribuing, please read our `Code of Conduct <https://github.com/billingegroup/bg-mpl-stylesheets/blob/main/CODE_OF_CONDUCT.rst>`_.
 
 Contact
 -------
 
-For more information on bg-mpl-stylesheets please email Prof. Simon Billinge at sb2896@columbia.edu.
+For more information on bg-mpl-stylesheets please visit the project `web-page <https://billingegroup.github.io/>`_ or email Prof. Simon Billinge at sb2896@columbia.edu.
