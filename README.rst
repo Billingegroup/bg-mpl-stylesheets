@@ -37,7 +37,7 @@
 
 A package for using Billinge group style files
 
-* bg-mpl-stylesheets is a Python software package that creates a standardized matplotlib figure format. This includes specialized fonts, figure border, color cycle, tick parameters, and more. 
+* bg-mpl-stylesheets is a Python software package that creates a standardized matplotlib figure format. This includes specialized fonts, figure border, color cycle, tick parameters, and more.
 
 Citation
 --------
@@ -64,7 +64,7 @@ The following creates and activates a new environment named ``bg-mpl-stylesheets
         conda activate bg-mpl-stylesheets_env
 
 Then, to fully install ``bg-mpl-stylesheets`` in our active environment, run ::
-        
+
         conda install --file requirements/examples.txt
         conda install bg-mpl-stylesheets
 
@@ -87,7 +87,7 @@ Usage
 By default the package uses LaTeX fonts for mathematical symbols. This feature requires a Latex package on your computer.  It is not required for the use of the style-sheet but gives better results for things like angstrom symbols.  Matplotlib will look for your installed latex package, for example TeXLive or MikTex. If it can't find a latex package it will look for non-latex font replacements.
 
 To use the stylesheet, near the beginning your python script type ::
-        
+
         from bg_mpl_stylesheets.styles import all_styles
         plt.style.use(all_styles["<style-name>"])
 
@@ -119,7 +119,7 @@ Not that the ``rcParams`` are global. It can get very confusing if these are upd
         import matplotlib.pyplot as plt
 
         @mpl.rc_context({'lines.linewidth': 1, 'axes.linewidth': 0.7, 'xtick.major.size':
-                0.7, 'xtick.major.width': 0.7,  'xtick.labelsize': 5, 'legend.frameon': False, 
+                0.7, 'xtick.major.width': 0.7,  'xtick.labelsize': 5, 'legend.frameon': False,
                 'legend.loc': 'best', 'font.size': 5, 'axes.labelsize': 5, 'ytick.left': False,
                 'ytick.labelleft': False, 'ytick.right': False
              })
@@ -216,7 +216,7 @@ You may select a specific color to plot from `Colors`: ::
         # if you know the hex and need the name. E.g., you want to make the plot shown here
         for i, hex in enumerate(cycle):
             ax.plot(x, y + offset * i, label=Colors(hex).name, color=hex, linestyle="-")
-      
+
 Color list
 ----------------
 
@@ -277,7 +277,7 @@ Support and Contribute
 
 `Diffpy user group <https://groups.google.com/g/diffpy-users>`_ is the discussion forum for general questions and discussions about the use of bg-mpl-stylesheets. Please join the bg-mpl-stylesheets users community by joining the Google group. The bg-mpl-stylesheets project welcomes your expertise and enthusiasm!
 
-If you see a bug or want to request a feature, please `report it as an issue <https://github.com/billingegroup/bg-mpl-stylesheets/issues>`_ and/or `submit a fix as a PR <https://github.com/billingegroup/bg-mpl-stylesheets/pulls>`_. You can also post it to the `Diffpy user group <https://groups.google.com/g/diffpy-users>`_. 
+If you see a bug or want to request a feature, please `report it as an issue <https://github.com/billingegroup/bg-mpl-stylesheets/issues>`_ and/or `submit a fix as a PR <https://github.com/billingegroup/bg-mpl-stylesheets/pulls>`_. You can also post it to the `Diffpy user group <https://groups.google.com/g/diffpy-users>`_.
 
 Feel free to fork the project and contribute. To install bg-mpl-stylesheets
 in a development mode, with its sources being directly used by Python
