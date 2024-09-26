@@ -93,7 +93,7 @@ target/
 
 # version information
 setup.cfg
-/src/bg-mpl-stylesheets/*/version.cfg
+/src/bg_mpl_stylesheets/*/version.cfg
 
 # Rever
 rever/
