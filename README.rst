@@ -64,7 +64,8 @@ The following creates and activates a new environment named ``bg-mpl-stylesheets
         conda activate bg-mpl-stylesheets_env
 
 Then, to fully install ``bg-mpl-stylesheets`` in our active environment, run ::
-
+        
+        conda install --file requirements/examples.txt
         conda install bg-mpl-stylesheets
 
 Another option is to use ``pip`` to download and install the latest release from
