@@ -18,8 +18,6 @@ def user_filesystem(tmp_path):
 
     yield tmp_path
 
-import pytest
-
 
 def create_svg_with_layers():
     # Define the SVG content as a string
