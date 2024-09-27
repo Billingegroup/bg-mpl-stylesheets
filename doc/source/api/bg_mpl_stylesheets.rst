@@ -7,10 +7,10 @@
             :members:
             :undoc-members:
             :show-inheritance:
-        
+
         Submodules
         ----------
-        
+
             bg_mpl_stylesheets.inkscape_tools module
             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -18,7 +18,7 @@
                 :members:
                 :undoc-members:
                 :show-inheritance:
-            
+
             bg_mpl_stylesheets.translate module
             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -26,7 +26,7 @@
                 :members:
                 :undoc-members:
                 :show-inheritance:
-            
+
             bg_mpl_stylesheets.styles module
             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -34,7 +34,7 @@
                 :members:
                 :undoc-members:
                 :show-inheritance:
-            
+
             bg_mpl_stylesheets.colors module
             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -42,4 +42,4 @@
                 :members:
                 :undoc-members:
                 :show-inheritance:
-            
+
