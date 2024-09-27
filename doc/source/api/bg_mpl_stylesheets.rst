@@ -3,7 +3,7 @@
 bg-mpl-stylesheets package
 ==========================
 
-.. automodule:: bg-mpl-stylesheets
+.. automodule:: bg_mpl_stylesheets
     :members:
     :undoc-members:
     :show-inheritance:
@@ -11,34 +11,34 @@ bg-mpl-stylesheets package
 Submodules
 ----------
 
-bg-mpl-stylesheets.inkscape_tools module
+bg_mpl_stylesheets.inkscape_tools module
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. automodule:: bg-mpl-stylesheets.inkscape_tools
+.. automodule:: bg_mpl_stylesheets.inkscape_tools
     :members:
     :undoc-members:
     :show-inheritance:
 
-bg-mpl-stylesheets.translate module
+bg_mpl_stylesheets.translate module
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. automodule:: bg-mpl-stylesheets.translate
+.. automodule:: bg_mpl_stylesheets.translate
     :members:
     :undoc-members:
     :show-inheritance:
 
-bg-mpl-stylesheets.styles module
+bg_mpl_stylesheets.styles module
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. automodule:: bg-mpl-stylesheets.styles
+.. automodule:: bg_mpl_stylesheets.styles
     :members:
     :undoc-members:
     :show-inheritance:
 
-bg-mpl-stylesheets.colors module
+bg_mpl_stylesheets.colors module
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. automodule:: bg-mpl-stylesheets.colors
+.. automodule:: bg_mpl_stylesheets.colors
     :members:
     :undoc-members:
     :show-inheritance:
