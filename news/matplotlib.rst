@@ -16,7 +16,7 @@
 
 **Fixed:**
 
-* include matplotlib insteaad of matplotlib-base in run.txt
+* include matplotlib instead of matplotlib-base in run.txt
 
 **Security:**
 
