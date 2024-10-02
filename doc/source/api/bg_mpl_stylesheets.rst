@@ -42,3 +42,4 @@ bg_mpl_stylesheets.colors module
     :members:
     :undoc-members:
     :show-inheritance:
+
