@@ -2,6 +2,8 @@
 Release Notes
 =============
 
+.. current developments
+
 0.3.2
 =====
 
