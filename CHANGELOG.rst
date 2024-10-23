@@ -4,6 +4,18 @@ Release Notes
 
 .. current developments
 
+0.4.2
+=====
+
+**Fixed:**
+
+* Another recut to include issue templates
+* tests folder at the root of the repo
+* re-cookiecut repo to group's package standard
+* dependency installation in pyproject.toml for pip install
+* add matplotlib to pip.txt, maintain matplotlib-base in conda.txt
+
+
 0.3.2
 =====
 
