@@ -70,7 +70,7 @@ Then, to fully install ``bg-mpl-stylesheets`` in our active environment, run ::
 
 To confirm that the installation was successful, type ::
 
-        python -c "import bg-mpl-stylesheets; print(bg-mpl-stylesheets.__version__)"
+        python -c "import bg_mpl_stylesheets; print(bg_mpl_stylesheets.__version__)"
 
 The output should print the latest version displayed on the badges above.
 
