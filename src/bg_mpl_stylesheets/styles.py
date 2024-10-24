@@ -1,4 +1,4 @@
-from distutils.spawn import find_executable
+from shutil import which
 
 from matplotlib import cycler
 
@@ -89,7 +89,7 @@ bg_style = {
 
 
 def update_style_with_latex(style):
-    if find_executable("latex"):
+    if which("latex"):
         tex = {
             ###################
             # text properties #
