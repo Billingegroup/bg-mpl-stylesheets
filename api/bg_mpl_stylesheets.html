@@ -1,27 +1,24 @@
+
+
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" data-content_root="../">
 <head>
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>bg-mpl-stylesheets package &mdash; bg-mpl-stylesheets 0.4.1 documentation</title>
+  <title>bg-mpl-stylesheets package &mdash; bg-mpl-stylesheets 0.5.0rc0 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
-      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=7ab3649f" />
 
   
-  <!--[if lt IE 9]>
-    <script src="../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
-  
-        <script src="../_static/jquery.js?v=5d32c60e"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-        <script src="../_static/documentation_options.js?v=bd778e0b"></script>
-        <script src="../_static/doctools.js?v=9a2dae69"></script>
-        <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=d127344c"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="bg_mpl_stylesheets.example_package package" href="bg_mpl_stylesheets.example_package.html" />
     <link rel="prev" title="Release Notes" href="../release.html" /> 
 </head>
 
@@ -36,9 +33,6 @@
           <a href="../index.html" class="icon icon-home">
             bg-mpl-stylesheets
           </a>
-              <div class="version">
-                0.4.1
-              </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
     <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
@@ -50,10 +44,7 @@
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../license.html">License</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../release.html">Release Notes</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Package API</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="bg_mpl_stylesheets.example_package.html">bg_mpl_stylesheets.example_package package</a></li>
-</ul>
-</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Package API</a></li>
 </ul>
 
         </div>
@@ -80,26 +71,136 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="title">
-<h1>bg-mpl-stylesheets package<a class="headerlink" href="#title" title="Link to this heading"></a></h1>
-<p id="module-bg_mpl_stylesheets">A package for using Billinge group style files</p>
-<section id="subpackages">
-<h2>Subpackages<a class="headerlink" href="#subpackages" title="Link to this heading"></a></h2>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="bg_mpl_stylesheets.example_package.html">bg_mpl_stylesheets.example_package package</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="bg_mpl_stylesheets.example_package.html#foo">bg_mpl_stylesheets.example_package.foo module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="bg_mpl_stylesheets.example_package.html#bar">bg_mpl_stylesheets.example_package.bar module</a></li>
-</ul>
-</li>
-</ul>
-</div>
-</section>
+  <section id="module-bg_mpl_stylesheets">
+<span id="bg-mpl-stylesheets-package"></span><h1>bg-mpl-stylesheets package<a class="headerlink" href="#module-bg_mpl_stylesheets" title="Link to this heading"></a></h1>
+<p>A package for using Billinge group style files</p>
 <section id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading"></a></h2>
+<section id="module-bg_mpl_stylesheets.inkscape_tools">
+<span id="bg-mpl-stylesheets-inkscape-tools-module"></span><h3>bg_mpl_stylesheets.inkscape_tools module<a class="headerlink" href="#module-bg_mpl_stylesheets.inkscape_tools" title="Link to this heading"></a></h3>
+<dl class="py function">
+<dt class="sig sig-object py" id="bg_mpl_stylesheets.inkscape_tools.export_layers_to_pdf">
+<span class="sig-prename descclassname"><span class="pre">bg_mpl_stylesheets.inkscape_tools.</span></span><span class="sig-name descname"><span class="pre">export_layers_to_pdf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">svg_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_pdf</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">layers_to_include</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bg_mpl_stylesheets/inkscape_tools.html#export_layers_to_pdf"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bg_mpl_stylesheets.inkscape_tools.export_layers_to_pdf" title="Link to this definition"></a></dt>
+<dd><p>Export a subset of layers from an svg file to a PDF output</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>string</strong> (<em>output_pdf</em>) – The path to the svg</p></li>
+<li><p><strong>string</strong> – The path to the output pdf file</p></li>
+<li><p><strong>strings</strong> (<em>layers_to_include list of</em>) – The layers_to_include</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="bg_mpl_stylesheets.inkscape_tools.get_all_layer_ids">
+<span class="sig-prename descclassname"><span class="pre">bg_mpl_stylesheets.inkscape_tools.</span></span><span class="sig-name descname"><span class="pre">get_all_layer_ids</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">svg_file</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bg_mpl_stylesheets/inkscape_tools.html#get_all_layer_ids"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bg_mpl_stylesheets.inkscape_tools.get_all_layer_ids" title="Link to this definition"></a></dt>
+<dd><p>The layer IDs are the names of the layers, but this python script will return them all</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>string</strong> (<em>svg_file</em>) – The path to the svg</p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p>The layer IDs as a list of strings</p>
+</dd>
+</dl>
+</dd></dl>
+
 </section>
-<section id="module">
-<h2>bg_mpl_stylesheets.example_submodule module<a class="headerlink" href="#module" title="Link to this heading"></a></h2>
+<section id="bg-mpl-stylesheets-translate-module">
+<h3>bg_mpl_stylesheets.translate module<a class="headerlink" href="#bg-mpl-stylesheets-translate-module" title="Link to this heading"></a></h3>
+</section>
+<section id="module-bg_mpl_stylesheets.styles">
+<span id="bg-mpl-stylesheets-styles-module"></span><h3>bg_mpl_stylesheets.styles module<a class="headerlink" href="#module-bg_mpl_stylesheets.styles" title="Link to this heading"></a></h3>
+<dl class="py function">
+<dt class="sig sig-object py" id="bg_mpl_stylesheets.styles.update_style_with_latex">
+<span class="sig-prename descclassname"><span class="pre">bg_mpl_stylesheets.styles.</span></span><span class="sig-name descname"><span class="pre">update_style_with_latex</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">style</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bg_mpl_stylesheets/styles.html#update_style_with_latex"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bg_mpl_stylesheets.styles.update_style_with_latex" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-bg_mpl_stylesheets.colors">
+<span id="bg-mpl-stylesheets-colors-module"></span><h3>bg_mpl_stylesheets.colors module<a class="headerlink" href="#module-bg_mpl_stylesheets.colors" title="Link to this heading"></a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="bg_mpl_stylesheets.colors.Colors">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">bg_mpl_stylesheets.colors.</span></span><span class="sig-name descname"><span class="pre">Colors</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">names=&lt;not</span> <span class="pre">given&gt;</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">*values</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qualname=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">type=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">start=1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">boundary=None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bg_mpl_stylesheets/colors.html#Colors"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bg_mpl_stylesheets.colors.Colors" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="bg_mpl_stylesheets.colors.Colors.bg_beige">
+<span class="sig-name descname"><span class="pre">bg_beige</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'#C09F80'</span></em><a class="headerlink" href="#bg_mpl_stylesheets.colors.Colors.bg_beige" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="bg_mpl_stylesheets.colors.Colors.bg_blue">
+<span class="sig-name descname"><span class="pre">bg_blue</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'#0B3C5D'</span></em><a class="headerlink" href="#bg_mpl_stylesheets.colors.Colors.bg_blue" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="bg_mpl_stylesheets.colors.Colors.bg_brown">
+<span class="sig-name descname"><span class="pre">bg_brown</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'#6C5050'</span></em><a class="headerlink" href="#bg_mpl_stylesheets.colors.Colors.bg_brown" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="bg_mpl_stylesheets.colors.Colors.bg_burgundy">
+<span class="sig-name descname"><span class="pre">bg_burgundy</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'#76323F'</span></em><a class="headerlink" href="#bg_mpl_stylesheets.colors.Colors.bg_burgundy" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="bg_mpl_stylesheets.colors.Colors.bg_green">
+<span class="sig-name descname"><span class="pre">bg_green</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'#1C6B0A'</span></em><a class="headerlink" href="#bg_mpl_stylesheets.colors.Colors.bg_green" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="bg_mpl_stylesheets.colors.Colors.bg_grey">
+<span class="sig-name descname"><span class="pre">bg_grey</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'#B0B0B0FF'</span></em><a class="headerlink" href="#bg_mpl_stylesheets.colors.Colors.bg_grey" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="bg_mpl_stylesheets.colors.Colors.bg_light_blue">
+<span class="sig-name descname"><span class="pre">bg_light_blue</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'#328CC1'</span></em><a class="headerlink" href="#bg_mpl_stylesheets.colors.Colors.bg_light_blue" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="bg_mpl_stylesheets.colors.Colors.bg_light_grey">
+<span class="sig-name descname"><span class="pre">bg_light_grey</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'#A8B6C1'</span></em><a class="headerlink" href="#bg_mpl_stylesheets.colors.Colors.bg_light_grey" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="bg_mpl_stylesheets.colors.Colors.bg_muted_olive">
+<span class="sig-name descname"><span class="pre">bg_muted_olive</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'#918770'</span></em><a class="headerlink" href="#bg_mpl_stylesheets.colors.Colors.bg_muted_olive" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="bg_mpl_stylesheets.colors.Colors.bg_olive_green">
+<span class="sig-name descname"><span class="pre">bg_olive_green</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'#626E60'</span></em><a class="headerlink" href="#bg_mpl_stylesheets.colors.Colors.bg_olive_green" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="bg_mpl_stylesheets.colors.Colors.bg_red">
+<span class="sig-name descname"><span class="pre">bg_red</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'#B82601'</span></em><a class="headerlink" href="#bg_mpl_stylesheets.colors.Colors.bg_red" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="bg_mpl_stylesheets.colors.Colors.bg_yellow">
+<span class="sig-name descname"><span class="pre">bg_yellow</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'#D9B310'</span></em><a class="headerlink" href="#bg_mpl_stylesheets.colors.Colors.bg_yellow" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="bg_mpl_stylesheets.colors.Colors.columbia_blue">
+<span class="sig-name descname"><span class="pre">columbia_blue</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'#B9D9EB'</span></em><a class="headerlink" href="#bg_mpl_stylesheets.colors.Colors.columbia_blue" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="bg_mpl_stylesheets.colors.Colors.get_bg_colors">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_bg_colors</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span></span><a class="reference internal" href="../_modules/bg_mpl_stylesheets/colors.html#Colors.get_bg_colors"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bg_mpl_stylesheets.colors.Colors.get_bg_colors" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
 </section>
 </section>
 
@@ -108,7 +209,6 @@
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="../release.html" class="btn btn-neutral float-left" title="Release Notes" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="bg_mpl_stylesheets.example_package.html" class="btn btn-neutral float-right" title="bg_mpl_stylesheets.example_package package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

@@ -1,0 +1,213 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>bg_mpl_stylesheets.styles &mdash; bg-mpl-stylesheets 0.5.0rc0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=7ab3649f" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=d127344c"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            bg-mpl-stylesheets
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../release.html">Release Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api/bg_mpl_stylesheets.html">Package API</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">bg-mpl-stylesheets</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Module code</a></li>
+      <li class="breadcrumb-item active">bg_mpl_stylesheets.styles</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for bg_mpl_stylesheets.styles</h1><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">shutil</span> <span class="kn">import</span> <span class="n">which</span>
+
+<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">cycler</span>
+
+<span class="n">bg_style</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="c1">####################</span>
+    <span class="c1"># lines properties #</span>
+    <span class="c1">####################</span>
+    <span class="s2">&quot;lines.linewidth&quot;</span><span class="p">:</span> <span class="mf">2.50</span><span class="p">,</span>
+    <span class="s2">&quot;lines.markeredgewidth&quot;</span><span class="p">:</span> <span class="mf">0.25</span><span class="p">,</span>
+    <span class="s2">&quot;lines.markersize&quot;</span><span class="p">:</span> <span class="mf">6.00</span><span class="p">,</span>
+    <span class="s2">&quot;lines.solid_capstyle&quot;</span><span class="p">:</span> <span class="s2">&quot;round&quot;</span><span class="p">,</span>
+    <span class="c1">###################</span>
+    <span class="c1"># font properties #</span>
+    <span class="c1">###################</span>
+    <span class="s2">&quot;font.size&quot;</span><span class="p">:</span> <span class="mf">15.0</span><span class="p">,</span>
+    <span class="s2">&quot;font.family&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;sans-serif&quot;</span><span class="p">],</span>
+    <span class="s2">&quot;font.sans-serif&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">&quot;DejaVu Sans&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Bitstream Vera Sans&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Computer Modern Sans Serif&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Lucida Grande&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Verdana&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Geneva&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Lucid&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Arial&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Helvetica&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;Avant Garde&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;sans-serif&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;cm&quot;</span><span class="p">,</span>
+    <span class="p">],</span>
+    <span class="c1">###################</span>
+    <span class="c1"># axes properties #</span>
+    <span class="c1">###################</span>
+    <span class="s2">&quot;axes.titlesize&quot;</span><span class="p">:</span> <span class="mf">14.0</span><span class="p">,</span>
+    <span class="s2">&quot;axes.labelsize&quot;</span><span class="p">:</span> <span class="mf">16.0</span><span class="p">,</span>
+    <span class="s2">&quot;axes.labelcolor&quot;</span><span class="p">:</span> <span class="s2">&quot;k&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;axes.linewidth&quot;</span><span class="p">:</span> <span class="mf">2.5</span><span class="p">,</span>
+    <span class="s2">&quot;axes.edgecolor&quot;</span><span class="p">:</span> <span class="s2">&quot;k&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;axes.prop_cycle&quot;</span><span class="p">:</span> <span class="n">cycler</span><span class="p">(</span>
+        <span class="s2">&quot;color&quot;</span><span class="p">,</span>
+        <span class="p">[</span>
+            <span class="s2">&quot;#0B3C5D&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;#B82601&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;#1C6B0A&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;#328CC1&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;#A8B6C1&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;#D9B310&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;#6C5050&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;#76323F&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;#626E60&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;#918770&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;#C09F80&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;#B0B0B0FF&quot;</span><span class="p">,</span>
+        <span class="p">],</span>
+    <span class="p">),</span>
+    <span class="c1">####################</span>
+    <span class="c1"># xtick properties #</span>
+    <span class="c1">####################</span>
+    <span class="s2">&quot;xtick.top&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="s2">&quot;xtick.direction&quot;</span><span class="p">:</span> <span class="s2">&quot;in&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;xtick.color&quot;</span><span class="p">:</span> <span class="s2">&quot;k&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;xtick.labelsize&quot;</span><span class="p">:</span> <span class="mf">15.0</span><span class="p">,</span>
+    <span class="s2">&quot;xtick.minor.width&quot;</span><span class="p">:</span> <span class="mf">0.5</span><span class="p">,</span>
+    <span class="s2">&quot;xtick.major.width&quot;</span><span class="p">:</span> <span class="mf">1.7</span><span class="p">,</span>
+    <span class="s2">&quot;xtick.major.pad&quot;</span><span class="p">:</span> <span class="mf">5.0</span><span class="p">,</span>
+    <span class="c1">####################</span>
+    <span class="c1"># ytick properties #</span>
+    <span class="c1">####################</span>
+    <span class="s2">&quot;ytick.right&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="s2">&quot;ytick.direction&quot;</span><span class="p">:</span> <span class="s2">&quot;in&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;ytick.color&quot;</span><span class="p">:</span> <span class="s2">&quot;k&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;ytick.labelsize&quot;</span><span class="p">:</span> <span class="mf">15.0</span><span class="p">,</span>
+    <span class="s2">&quot;ytick.minor.width&quot;</span><span class="p">:</span> <span class="mf">0.5</span><span class="p">,</span>
+    <span class="s2">&quot;ytick.major.width&quot;</span><span class="p">:</span> <span class="mf">1.7</span><span class="p">,</span>
+    <span class="s2">&quot;ytick.major.pad&quot;</span><span class="p">:</span> <span class="mf">5.0</span><span class="p">,</span>
+    <span class="c1">###################</span>
+    <span class="c1"># grid properties #</span>
+    <span class="c1">###################</span>
+    <span class="s2">&quot;grid.color&quot;</span><span class="p">:</span> <span class="s2">&quot;#b2b2b2&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;grid.linestyle&quot;</span><span class="p">:</span> <span class="s2">&quot;--&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;grid.linewidth&quot;</span><span class="p">:</span> <span class="mf">1.0</span><span class="p">,</span>
+    <span class="c1">#####################</span>
+    <span class="c1"># figure properties #</span>
+    <span class="c1">#####################</span>
+    <span class="s2">&quot;figure.facecolor&quot;</span><span class="p">:</span> <span class="s2">&quot;w&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;savefig.bbox&quot;</span><span class="p">:</span> <span class="s2">&quot;tight&quot;</span><span class="p">,</span>
+<span class="p">}</span>
+
+
+<div class="viewcode-block" id="update_style_with_latex">
+<a class="viewcode-back" href="../../api/bg_mpl_stylesheets.html#bg_mpl_stylesheets.styles.update_style_with_latex">[docs]</a>
+<span class="k">def</span> <span class="nf">update_style_with_latex</span><span class="p">(</span><span class="n">style</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">which</span><span class="p">(</span><span class="s2">&quot;latex&quot;</span><span class="p">):</span>
+        <span class="n">tex</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="c1">###################</span>
+            <span class="c1"># text properties #</span>
+            <span class="c1">###################</span>
+            <span class="s2">&quot;text.usetex&quot;</span><span class="p">:</span> <span class="kc">True</span><span class="p">,</span>
+            <span class="s2">&quot;text.latex.preamble&quot;</span><span class="p">:</span> <span class="sa">r</span><span class="s2">&quot;\usepackage[cm]</span><span class="si">{sfmath}</span><span class="s2">&quot;</span><span class="p">,</span>
+            <span class="s2">&quot;mathtext.fontset&quot;</span><span class="p">:</span> <span class="s2">&quot;stixsans&quot;</span><span class="p">,</span>
+        <span class="p">}</span>
+        <span class="n">style</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">tex</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">style</span></div>
+
+
+
+<span class="n">all_styles</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;bg-style&quot;</span><span class="p">:</span> <span class="n">bg_style</span><span class="p">}</span>
+
+<span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">style</span> <span class="ow">in</span> <span class="n">all_styles</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="n">all_styles</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="n">key</span><span class="p">:</span> <span class="n">update_style_with_latex</span><span class="p">(</span><span class="n">style</span><span class="p">)})</span>
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, The Trustees of Columbia University in the City of New York.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

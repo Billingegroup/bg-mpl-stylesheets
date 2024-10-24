@@ -1,0 +1,191 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>bg_mpl_stylesheets.inkscape_tools &mdash; bg-mpl-stylesheets 0.5.0rc0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=7ab3649f" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=d127344c"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            bg-mpl-stylesheets
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../release.html">Release Notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../api/bg_mpl_stylesheets.html">Package API</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">bg-mpl-stylesheets</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Module code</a></li>
+      <li class="breadcrumb-item active">bg_mpl_stylesheets.inkscape_tools</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <h1>Source code for bg_mpl_stylesheets.inkscape_tools</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">subprocess</span>
+
+
+<div class="viewcode-block" id="export_layers_to_pdf">
+<a class="viewcode-back" href="../../api/bg_mpl_stylesheets.html#bg_mpl_stylesheets.inkscape_tools.export_layers_to_pdf">[docs]</a>
+<span class="k">def</span> <span class="nf">export_layers_to_pdf</span><span class="p">(</span><span class="n">svg_file</span><span class="p">,</span> <span class="n">output_pdf</span><span class="p">,</span> <span class="n">layers_to_include</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Export a subset of layers from an svg file to a PDF output</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    svg_file string</span>
+<span class="sd">      The path to the svg</span>
+<span class="sd">    output_pdf string</span>
+<span class="sd">      The path to the output pdf file</span>
+<span class="sd">    layers_to_include list of strings</span>
+<span class="sd">      The layers_to_include</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    None</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="c1"># Define the command to run Inkscape</span>
+    <span class="n">command</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="s2">&quot;inkscape&quot;</span><span class="p">,</span>
+        <span class="n">svg_file</span><span class="p">,</span>
+        <span class="s2">&quot;--export-type=pdf&quot;</span><span class="p">,</span>
+        <span class="sa">f</span><span class="s2">&quot;--export-filename=</span><span class="si">{</span><span class="n">output_pdf</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+    <span class="p">]</span>
+
+    <span class="c1"># Add commands to hide all layers initially</span>
+    <span class="n">layers_hide</span> <span class="o">=</span> <span class="p">[</span><span class="sa">f</span><span class="s2">&quot;--select-by-id=</span><span class="si">{</span><span class="n">layer_id</span><span class="si">}</span><span class="s2"> --verb=LayerHide&quot;</span> <span class="k">for</span> <span class="n">layer_id</span> <span class="ow">in</span> <span class="n">get_all_layer_ids</span><span class="p">(</span><span class="n">svg_file</span><span class="p">)]</span>
+    <span class="n">command</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">layers_hide</span><span class="p">)</span>
+
+    <span class="c1"># Add commands to show specific layers</span>
+    <span class="n">layers_show</span> <span class="o">=</span> <span class="p">[</span><span class="sa">f</span><span class="s2">&quot;--select-by-id=</span><span class="si">{</span><span class="n">layer_id</span><span class="si">}</span><span class="s2"> --verb=LayerShow&quot;</span> <span class="k">for</span> <span class="n">layer_id</span> <span class="ow">in</span> <span class="n">layers_to_include</span><span class="p">]</span>
+    <span class="n">command</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">layers_show</span><span class="p">)</span>
+
+    <span class="c1"># Add command to export</span>
+    <span class="n">command</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;--verb=FileSave&quot;</span><span class="p">)</span>
+    <span class="n">command</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;--verb=FileClose&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Execute the command</span>
+    <span class="n">subprocess</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">command</span><span class="p">,</span> <span class="n">check</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="get_all_layer_ids">
+<a class="viewcode-back" href="../../api/bg_mpl_stylesheets.html#bg_mpl_stylesheets.inkscape_tools.get_all_layer_ids">[docs]</a>
+<span class="k">def</span> <span class="nf">get_all_layer_ids</span><span class="p">(</span><span class="n">svg_file</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    The layer IDs are the names of the layers, but this python script will return them all</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    svg_file string</span>
+<span class="sd">      The path to the svg</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    The layer IDs as a list of strings</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="kn">from</span> <span class="nn">xml.etree</span> <span class="kn">import</span> <span class="n">ElementTree</span> <span class="k">as</span> <span class="n">ET</span>
+
+    <span class="n">tree</span> <span class="o">=</span> <span class="n">ET</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">svg_file</span><span class="p">)</span>
+    <span class="n">root</span> <span class="o">=</span> <span class="n">tree</span><span class="o">.</span><span class="n">getroot</span><span class="p">()</span>
+
+    <span class="c1"># Inkscape-specific namespace for layer elements</span>
+    <span class="n">namespace</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;svg&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.w3.org/2000/svg&quot;</span><span class="p">}</span>
+
+    <span class="n">layer_ids</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">layer</span> <span class="ow">in</span> <span class="n">root</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="s2">&quot;.//svg:g&quot;</span><span class="p">,</span> <span class="n">namespace</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">layer</span><span class="o">.</span><span class="n">attrib</span><span class="p">)</span>
+        <span class="k">if</span> <span class="s2">&quot;{http://www.inkscape.org/namespaces/inkscape}label&quot;</span> <span class="ow">in</span> <span class="n">layer</span><span class="o">.</span><span class="n">attrib</span><span class="p">:</span>
+            <span class="n">layer_ids</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">layer</span><span class="o">.</span><span class="n">attrib</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
+
+    <span class="k">return</span> <span class="n">layer_ids</span></div>
+
+
+
+<span class="c1"># Example usage</span>
+<span class="c1"># svg_file = &quot;example.svg&quot;</span>
+<span class="c1"># output_pdf = &quot;output.pdf&quot;</span>
+<span class="c1"># layers_to_include = [&quot;layer1&quot;, &quot;layer2&quot;]  # Replace with your layer IDs</span>
+
+<span class="c1"># export_layers_to_pdf(svg_file, output_pdf, layers_to_include)</span>
+</pre></div>
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, The Trustees of Columbia University in the City of New York.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

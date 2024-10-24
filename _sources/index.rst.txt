@@ -4,7 +4,7 @@
 
 .. |title| replace:: bg-mpl-stylesheets documentation
 
-bg-mpl-stylesheets - A package for using Billinge group style files.
+bg-mpl-stylesheets - A package for using Billinge group Matplotlib style files.
 
 | Software version |release|.
 | Last updated |today|.
