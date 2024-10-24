@@ -60,13 +60,12 @@ To add "conda-forge" to the conda channels, run the following in a terminal. ::
 We want to install our packages in a suitable conda environment.
 The following creates and activates a new environment named ``bg-mpl-stylesheets_env`` ::
 
-        conda create -n bg-mpl-stylesheets_env bg-mpl-stylesheets
+        conda create -n bg-mpl-stylesheets_env bg-mpl-stylesheets python=3.12
         conda activate bg-mpl-stylesheets_env
 
 Then, to fully install ``bg-mpl-stylesheets`` in our active environment, run ::
 
         conda install --file requirements/examples.txt
-        conda install bg-mpl-stylesheets
 
 To confirm that the installation was successful, type ::
 
