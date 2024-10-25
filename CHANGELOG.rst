@@ -10,13 +10,11 @@ Release Notes
 **Added:**
 
 * Support for python 3.13
-* Support for Python 3.13
 
 **Removed:**
 
 * Support for python 3.10
 * distutils module, as deprecated in Python 3.13
-* Support for Python 3.10
 
 
 0.4.2
