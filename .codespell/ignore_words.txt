@@ -9,3 +9,9 @@ socio-economic
 
 ;; Frobenius norm used in np.linalg.norm
 fro
+
+;; parameter in xtick.direction in matplotlib i.g. in, out, inout
+inout
+
+:: repository name: https://github.com/regro/rever
+rever

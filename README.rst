@@ -145,7 +145,7 @@ You can also update style parameters locally by using the matplotlib style conte
             plt.ylabel('some numbers')
         plt.show()
 
-Here are a snapshot of values in ``all_styles["bg-style"]`` sheet which you may override with ``rc.parms`` to fine tune things: ::
+Here are a snapshot of values in ``all_styles["bg-style"]`` sheet which you may override with ``rc.params`` to fine tune things: ::
 
         'lines.linewidth':       2.50,
         'lines.markeredgewidth': 0.25,
@@ -307,7 +307,7 @@ trying to commit again.
 
 Improvements and fixes are always appreciated.
 
-Before contribuing, please read our `Code of Conduct <https://github.com/Billingegroup/bg-mpl-stylesheets/blob/main/CODE_OF_CONDUCT.rst>`_.
+Before contributing, please read our `Code of Conduct <https://github.com/Billingegroup/bg-mpl-stylesheets/blob/main/CODE_OF_CONDUCT.rst>`_.
 
 Contact
 -------
