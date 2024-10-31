@@ -13,5 +13,5 @@ fro
 ;; parameter in xtick.direction in matplotlib i.g. in, out, inout
 inout
 
-:: repository name: https://github.com/regro/rever
+;; repository name: https://github.com/regro/rever
 rever
