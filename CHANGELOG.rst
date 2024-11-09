@@ -4,6 +4,15 @@ Release Notes
 
 .. current developments
 
+0.5.1
+=====
+
+**Added:**
+
+* Spelling check via Codespell in pre-commit
+* Coverage report in each PR
+
+
 0.5.0
 =====
 
