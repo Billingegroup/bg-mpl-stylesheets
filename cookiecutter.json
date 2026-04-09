@@ -1,0 +1,20 @@
+{
+  "author_names": "Simon J.L. Billinge group",
+  "author_emails": "simon.billinge@gmail.com",
+  "maintainer_names": "Simon J.L. Billinge group",
+  "maintainer_emails": "simon.billinge@gmail.com",
+  "maintainer_github_usernames": "sbillinge",
+  "contributors": "Simon Billinge, Billinge Group members",
+  "license_holders": "The Contributor to the Billingegroup.bg-mpl-stylesheets project",
+  "project_name": "bg-mpl-stylesheets",
+  "github_username_or_orgname": "Billingegroup",
+  "github_repo_name": "bg-mpl-stylesheets",
+  "conda_pypi_package_dist_name": "bg-mpl-stylesheets",
+  "package_dir_name": "bg_mpl_stylesheets",
+  "project_short_description": "A package for using Billinge group Matplotlib style files.",
+  "project_keywords": "plotting style",
+  "minimum_supported_python_version": "3.12",
+  "maximum_supported_python_version": "3.14",
+  "project_needs_c_code_compiled": "No",
+  "project_has_gui_tests": "No"
+}

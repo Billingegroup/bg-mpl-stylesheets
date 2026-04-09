@@ -6,13 +6,13 @@ build-backend = "setuptools.build_meta"
 name = "bg-mpl-stylesheets"
 dynamic=['version', 'dependencies']
 authors = [
-  { name="Simon J.L. Billinge group", email="simon.billinge@gmail.com" },
+  {name='Simon J.L. Billinge group', email='simon.billinge@gmail.com'},
 ]
 maintainers = [
-  { name="Simon J.L. Billinge group", email="simon.billinge@gmail.com" },
+  {name='Simon J.L. Billinge group', email='simon.billinge@gmail.com'},
 ]
 description = "A package for using Billinge group Matplotlib style files."
-keywords = []
+keywords = ['plotting style']
 readme = "README.rst"
 requires-python = ">=3.12, <3.15"
 classifiers = [
@@ -48,6 +48,9 @@ include = ["*"]  # package names should match these glob patterns (["*"] by defa
 exclude = []  # exclude packages matching these glob patterns (empty by default)
 namespaces = false  # to disable scanning PEP 420 namespaces (true by default)
 
+[project.scripts]
+bg-mpl-stylesheets = "bg_mpl_stylesheets.app:main"
+
 [tool.setuptools.dynamic]
 dependencies = {file = ["requirements/pip.txt"]}
 
@@ -55,6 +58,11 @@ dependencies = {file = ["requirements/pip.txt"]}
 exclude-file = ".codespell/ignore_lines.txt"
 ignore-words = ".codespell/ignore_words.txt"
 skip = "*.cif,*.dat"
+
+[tool.docformatter]
+recursive = true
+wrap-summaries = 115
+wrap-descriptions = 115
 
 [tool.black]
 line-length = 115

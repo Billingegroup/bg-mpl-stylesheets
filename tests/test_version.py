@@ -1,7 +1,6 @@
-"""Unit tests for __version__.py
-"""
+"""Unit tests for __version__.py."""
 
-import bg_mpl_stylesheets
+import bg_mpl_stylesheets  # noqa
 
 
 def test_package_version():

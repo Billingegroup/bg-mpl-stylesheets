@@ -3,10 +3,10 @@ name: Check for News
 on:
   pull_request_target:
     branches:
-    - main
+      - main # GitHub does not evaluate expressions in trigger filters; edit this value if your base branch is not main
 
 jobs:
-  build:
-    uses: Billingegroup/release-scripts/.github/workflows/_check-news-item.yml@v0
+  check-news-item:
+    uses: scikit-package/release-scripts/.github/workflows/_check-news-item.yml@v0
     with:
       project: bg-mpl-stylesheets

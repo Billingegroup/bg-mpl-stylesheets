@@ -8,7 +8,7 @@
         :target: https://Billingegroup.github.io/bg-mpl-stylesheets
         :height: 100px
 
-|PyPi| |Forge| |PythonVersion| |PR|
+|PyPI| |Forge| |PythonVersion| |PR|
 
 |CI| |Codecov| |Black| |Tracking|
 
@@ -16,7 +16,7 @@
         :target: https://github.com/psf/black
 
 .. |CI| image:: https://github.com/Billingegroup/bg-mpl-stylesheets/actions/workflows/matrix-and-codecov-on-merge-to-main.yml/badge.svg
-        :target: https://github.com/Billingegroup/bg-mpl-stylesheets/actions/workflows/matrix-and-codecov-on-merge-to-main.yml
+        :target: https://github.com/Billingegroup/bg-mpl-stylesheets/actions/workflows/matrix-and-codecov.yml
 
 .. |Codecov| image:: https://codecov.io/gh/Billingegroup/bg-mpl-stylesheets/branch/main/graph/badge.svg
         :target: https://codecov.io/gh/Billingegroup/bg-mpl-stylesheets
@@ -25,8 +25,9 @@
         :target: https://anaconda.org/conda-forge/bg-mpl-stylesheets
 
 .. |PR| image:: https://img.shields.io/badge/PR-Welcome-29ab47ff
+        :target: https://github.com/Billingegroup/bg-mpl-stylesheets/pulls
 
-.. |PyPi| image:: https://img.shields.io/pypi/v/bg-mpl-stylesheets
+.. |PyPI| image:: https://img.shields.io/pypi/v/bg-mpl-stylesheets
         :target: https://pypi.org/project/bg-mpl-stylesheets/
 
 .. |PythonVersion| image:: https://img.shields.io/pypi/pyversions/bg-mpl-stylesheets
@@ -63,15 +64,6 @@ The following creates and activates a new environment named ``bg-mpl-stylesheets
         conda create -n bg-mpl-stylesheets_env bg-mpl-stylesheets
         conda activate bg-mpl-stylesheets_env
 
-Then, to fully install ``bg-mpl-stylesheets`` in our active environment, run ::
-
-        conda install --file requirements/examples.txt
-        conda install bg-mpl-stylesheets
-
-To confirm that the installation was successful, type ::
-
-        python -c "import bg_mpl_stylesheets; print(bg_mpl_stylesheets.__version__)"
-
 The output should print the latest version displayed on the badges above.
 
 If the above does not work, you can use ``pip`` to download and install the latest release from
@@ -85,6 +77,19 @@ If you prefer to install from sources, after installing the dependencies, obtain
 and run the following ::
 
         pip install .
+
+This package also provides command-line utilities. To check the software has been installed correctly, type ::
+
+        bg-mpl-stylesheets --version
+
+You can also type the following command to verify the installation. ::
+
+        python -c "import bg_mpl_stylesheets; print(bg_mpl_stylesheets.__version__)"
+
+
+To view the basic usage and available commands, type ::
+
+        bg-mpl-stylesheets -h
 
 Getting Started
 ---------------
@@ -307,9 +312,14 @@ trying to commit again.
 
 Improvements and fixes are always appreciated.
 
-Before contributing, please read our `Code of Conduct <https://github.com/Billingegroup/bg-mpl-stylesheets/blob/main/CODE_OF_CONDUCT.rst>`_.
+Before contributing, please read our `Code of Conduct <https://github.com/Billingegroup/bg-mpl-stylesheets/blob/main/CODE-OF-CONDUCT.rst>`_.
 
 Contact
 -------
 
-For more information on bg-mpl-stylesheets please visit the project `web-page <https://billingegroup.github.io/>`_ or email Prof. Simon Billinge at sb2896@columbia.edu.
+For more information on bg-mpl-stylesheets please visit the project `web-page <https://Billingegroup.github.io/>`_ or email the maintainers ``Simon J.L. Billinge group(simon.billinge@gmail.com)``.
+
+Acknowledgements
+----------------
+
+``bg-mpl-stylesheets`` is built and maintained with `scikit-package <https://scikit-package.github.io/scikit-package/>`_.

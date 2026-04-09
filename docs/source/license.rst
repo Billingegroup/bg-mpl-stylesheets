@@ -11,6 +11,7 @@ BSD 3-Clause License
 
 Copyright (c) 2024, The Trustees of Columbia University in
 the City of New York.
+Copyright (c) 2026-present, The Contributor to the Billingegroup.bg-mpl-stylesheets project.
 All Rights Reserved.
 
 Redistribution and use in source and binary forms, with or without
