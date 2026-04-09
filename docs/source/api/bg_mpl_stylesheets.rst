@@ -1,7 +1,9 @@
 :tocdepth: -1
 
-bg-mpl-stylesheets package
-==========================
+|title|
+=======
+
+.. |title| replace:: bg-mpl-stylesheets package
 
 .. automodule:: bg_mpl_stylesheets
     :members:

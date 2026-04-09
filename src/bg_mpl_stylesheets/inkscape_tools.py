@@ -2,8 +2,7 @@ import subprocess
 
 
 def export_layers_to_pdf(svg_file, output_pdf, layers_to_include):
-    """
-    Export a subset of layers from an svg file to a PDF output
+    """Export a subset of layers from an svg file to a PDF output.
 
     Parameters
     ----------
@@ -17,7 +16,6 @@ def export_layers_to_pdf(svg_file, output_pdf, layers_to_include):
     Returns
     -------
     None
-
     """
 
     # Define the command to run Inkscape
@@ -45,8 +43,7 @@ def export_layers_to_pdf(svg_file, output_pdf, layers_to_include):
 
 
 def get_all_layer_ids(svg_file):
-    """
-    The layer IDs are the names of the layers, but this python script will return them all
+    """The layer IDs are the names of the layers, but this python script will return them all.
 
     Parameters
     ----------
@@ -56,7 +53,6 @@ def get_all_layer_ids(svg_file):
     Returns
     -------
     The layer IDs as a list of strings
-
     """
     from xml.etree import ElementTree as ET
 
