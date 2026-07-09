@@ -28,4 +28,4 @@ ax.legend(loc="upper right", frameon=False, prop={"size": 14}, ncol=1)
 
 
 plt.show()
-fig.savefig("color_cycle.png", dpi=300)
+fig.savefig("color-cycle.png", dpi=300)

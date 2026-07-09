@@ -17,7 +17,6 @@ def export_layers_to_pdf(svg_file, output_pdf, layers_to_include):
     -------
     None
     """
-
     # Define the command to run Inkscape
     command = [
         "inkscape",
