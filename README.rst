@@ -100,13 +100,12 @@ By default the package uses LaTeX fonts for mathematical symbols. This feature r
 
 To use the stylesheet, near the beginning your python script type ::
 
-        from bg_mpl_stylesheets.styles import all_styles
-        plt.style.use(all_styles["<style-name>"])
+        from bg_mpl_stylesheets.styles import use_style
+        use_style()
 
-for example ::
+To use another stylesheet by name, pass the style name to ``use_style()`` ::
 
-        from bg_mpl_stylesheets.styles import all_styles
-        plt.style.use(all_styles["bg-style"])
+        use_style("<style-name>")
 
 If you wish to use BillingeGroup stylesheet as the default style for all your plots, please follow these steps.
 

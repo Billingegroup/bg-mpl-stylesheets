@@ -9,6 +9,19 @@ def test_update_style_with_latex():
     assert expected == actual
 
 
+def test_use_style(monkeypatch):
+    calls = []
+
+    def fake_use(style):
+        calls.append(style)
+
+    monkeypatch.setattr(styles.mpl_style, "use", fake_use)
+
+    styles.use_style()
+
+    assert calls == [styles.all_styles["bg-style"]]
+
+
 expected_style = {
     ####################
     # lines properties #

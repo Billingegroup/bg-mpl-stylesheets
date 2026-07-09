@@ -1,11 +1,11 @@
 import matplotlib.pyplot as plt
 from diffpy.utils.parsers.loaddata import loadData
 
-from bg_mpl_stylesheets.styles import all_styles
+from bg_mpl_stylesheets.styles import use_style
 
 # please read the README about how to install the group plot style package
 # and how to import it and use
-plt.style.use(all_styles["bg-style"])
+use_style()
 
 # load PDF data
 r, gcalc, dr, dg, gdiff = loadData("example/CdSe_data.fgr").T
