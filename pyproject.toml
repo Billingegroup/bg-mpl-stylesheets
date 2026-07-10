@@ -6,10 +6,10 @@ build-backend = "setuptools.build_meta"
 name = "bg-mpl-stylesheets"
 dynamic=['version', 'dependencies']
 authors = [
-  {name='Simon J.L. Billinge group', email='simon.billinge@gmail.com'},
+  {name='Simon J.L. Billinge group', email='sbillinge@ucsb.edu'},
 ]
 maintainers = [
-  {name='Simon J.L. Billinge group', email='simon.billinge@gmail.com'},
+  {name='Simon J.L. Billinge group', email='sbillinge@ucsb.edu'},
 ]
 description = "A package for using Billinge group Matplotlib style files."
 keywords = ['plotting style']

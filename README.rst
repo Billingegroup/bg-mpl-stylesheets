@@ -317,7 +317,7 @@ Before contributing, please read our `Code of Conduct <https://github.com/Billin
 Contact
 -------
 
-For more information on bg-mpl-stylesheets please visit the project `web-page <https://Billingegroup.github.io/>`_ or email the maintainers ``Simon J.L. Billinge group(simon.billinge@gmail.com)``.
+For more information on bg-mpl-stylesheets please visit the project `web-page <https://Billingegroup.github.io/>`_ or email the maintainers ``Simon J.L. Billinge group(sbillinge@ucsb.edu)``.
 
 Acknowledgements
 ----------------
