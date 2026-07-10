@@ -69,7 +69,9 @@ master_doc = "index"
 
 # General information about the project.
 project = "bg-mpl-stylesheets"
-copyright = "%Y, The Contributor to the Billingegroup.bg-mpl-stylesheets project"
+copyright = (
+    "%Y, The Contributor to the Billingegroup.bg-mpl-stylesheets project"
+)
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the

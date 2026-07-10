@@ -20,7 +20,9 @@ cycle = plt.rcParams["axes.prop_cycle"].by_key()["color"]
 
 # plot the color cycles and corresponding color codes.
 for i, hex in enumerate(cycle):
-    ax.plot(x, y + offset * i, label=Colors(hex).name, color=hex, linestyle="-")
+    ax.plot(
+        x, y + offset * i, label=Colors(hex).name, color=hex, linestyle="-"
+    )
 
 ax.set_xlim(0, 2.0)  # set x-axis lower and upper limits
 

@@ -4,7 +4,7 @@
 
 **Changed:**
 
-* Renamed static files and folders to use hyphens instead of underscores, per project naming convention (#92).
+* Updated project to the latest scikit-package template
 
 **Deprecated:**
 
@@ -16,7 +16,7 @@
 
 **Fixed:**
 
-* <news item>
+* Renamed static files and folders to use hyphens instead of underscores, per project naming convention (#92).
 
 **Security:**
 
