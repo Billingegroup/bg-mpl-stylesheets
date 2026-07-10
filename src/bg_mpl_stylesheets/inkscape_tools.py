@@ -17,7 +17,6 @@ def export_layers_to_pdf(svg_file, output_pdf, layers_to_include):
     -------
     None
     """
-
     # Define the command to run Inkscape
     command = [
         "inkscape",
@@ -27,11 +26,17 @@ def export_layers_to_pdf(svg_file, output_pdf, layers_to_include):
     ]
 
     # Add commands to hide all layers initially
-    layers_hide = [f"--select-by-id={layer_id} --verb=LayerHide" for layer_id in get_all_layer_ids(svg_file)]
+    layers_hide = [
+        f"--select-by-id={layer_id} --verb=LayerHide"
+        for layer_id in get_all_layer_ids(svg_file)
+    ]
     command.extend(layers_hide)
 
     # Add commands to show specific layers
-    layers_show = [f"--select-by-id={layer_id} --verb=LayerShow" for layer_id in layers_to_include]
+    layers_show = [
+        f"--select-by-id={layer_id} --verb=LayerShow"
+        for layer_id in layers_to_include
+    ]
     command.extend(layers_show)
 
     # Add command to export
@@ -43,7 +48,8 @@ def export_layers_to_pdf(svg_file, output_pdf, layers_to_include):
 
 
 def get_all_layer_ids(svg_file):
-    """The layer IDs are the names of the layers, but this python script will return them all.
+    """The layer IDs are the names of the layers, but this python script
+    will return them all.
 
     Parameters
     ----------
@@ -65,7 +71,10 @@ def get_all_layer_ids(svg_file):
     layer_ids = []
     for layer in root.findall(".//svg:g", namespace):
         print(layer.attrib)
-        if "{http://www.inkscape.org/namespaces/inkscape}label" in layer.attrib:
+        if (
+            "{http://www.inkscape.org/namespaces/inkscape}label"
+            in layer.attrib
+        ):
             layer_ids.append(layer.attrib["id"])
 
     return layer_ids

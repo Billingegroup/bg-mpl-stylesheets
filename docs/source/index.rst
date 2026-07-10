@@ -15,6 +15,8 @@ Getting started
 
 Welcome to the ``bg-mpl-stylesheets`` documentation!
 
+To get started, please visit the :ref:`Getting started <getting-started>` page.
+
 =======
 Authors
 =======
@@ -44,6 +46,7 @@ Table of contents
 .. toctree::
    :maxdepth: 2
 
+   getting-started
    Package API <api/bg_mpl_stylesheets>
    release
    license
