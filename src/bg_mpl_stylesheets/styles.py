@@ -109,5 +109,23 @@ for key, style in all_styles.items():
 
 
 def use_style(style="bg-style"):
-    """Apply a bg-mpl-stylesheets Matplotlib style."""
+    """Apply a bg-mpl-stylesheets Matplotlib style.
+
+    Parameters
+    ----------
+    style : str, optional
+        Name of the style to apply. The default is ``"bg-style"``.
+        Available options are the keys in ``all_styles``. Currently,
+        ``"bg-style"`` is the only available option.
+
+    Raises
+    ------
+    ValueError
+        If ``style`` is not a recognized style name.
+    """
+    if style not in all_styles:
+        raise ValueError(
+            f"{style} is not a recognized style. "
+            f"Please select from {list(all_styles)}."
+        )
     mpl_style.use(all_styles[style])

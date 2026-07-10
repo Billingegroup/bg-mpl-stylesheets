@@ -1,3 +1,4 @@
+import pytest
 from matplotlib import cycler
 
 from bg_mpl_stylesheets import styles
@@ -9,7 +10,7 @@ def test_update_style_with_latex():
     assert expected == actual
 
 
-def test_use_style(monkeypatch):
+def test_use_style_default(monkeypatch):
     calls = []
 
     def fake_use(style):
@@ -20,6 +21,29 @@ def test_use_style(monkeypatch):
     styles.use_style()
 
     assert calls == [styles.all_styles["bg-style"]]
+
+
+def test_use_style_valid_style(monkeypatch):
+    calls = []
+
+    monkeypatch.setattr(styles.mpl_style, "use", calls.append)
+
+    styles.use_style("bg-style")
+
+    assert calls == [styles.all_styles["bg-style"]]
+
+
+def test_use_style_invalid_style():
+    invalid_style = "not-a-style"
+    expected = (
+        f"{invalid_style} is not a recognized style. "
+        f"Please select from {list(styles.all_styles)}."
+    )
+
+    with pytest.raises(ValueError) as exc_info:
+        styles.use_style(invalid_style)
+
+    assert str(exc_info.value) == expected
 
 
 expected_style = {
