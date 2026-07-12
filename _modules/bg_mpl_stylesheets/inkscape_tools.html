@@ -5,16 +5,19 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>bg_mpl_stylesheets.inkscape_tools &mdash; bg-mpl-stylesheets 0.5.1 documentation</title>
-      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
-      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+  <title>bg_mpl_stylesheets.inkscape_tools &mdash; bg-mpl-stylesheets 0.6.0rc1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
 
   
       <script src="../../_static/jquery.js?v=5d32c60e"></script>
       <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../../_static/documentation_options.js?v=d9b85e4f"></script>
-      <script src="../../_static/doctools.js?v=9bcbadda"></script>
-      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../_static/documentation_options.js?v=a48607a1"></script>
+      <script src="../../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../../_static/copybutton.js?v=cca77546"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" /> 
@@ -40,9 +43,9 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../license.html">License</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../release.html">Release Notes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../api/bg_mpl_stylesheets.html">Package API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../release.html">Release notes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../license.html">License</a></li>
 </ul>
 
         </div>
@@ -70,14 +73,13 @@
            <div itemprop="articleBody">
              
   <h1>Source code for bg_mpl_stylesheets.inkscape_tools</h1><div class="highlight"><pre>
-<span></span><span class="kn">import</span> <span class="nn">subprocess</span>
+<span></span><span class="kn">import</span><span class="w"> </span><span class="nn">subprocess</span>
 
 
 <div class="viewcode-block" id="export_layers_to_pdf">
 <a class="viewcode-back" href="../../api/bg_mpl_stylesheets.html#bg_mpl_stylesheets.inkscape_tools.export_layers_to_pdf">[docs]</a>
-<span class="k">def</span> <span class="nf">export_layers_to_pdf</span><span class="p">(</span><span class="n">svg_file</span><span class="p">,</span> <span class="n">output_pdf</span><span class="p">,</span> <span class="n">layers_to_include</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Export a subset of layers from an svg file to a PDF output</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">export_layers_to_pdf</span><span class="p">(</span><span class="n">svg_file</span><span class="p">,</span> <span class="n">output_pdf</span><span class="p">,</span> <span class="n">layers_to_include</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Export a subset of layers from an svg file to a PDF output.</span>
 
 <span class="sd">    Parameters</span>
 <span class="sd">    ----------</span>
@@ -91,9 +93,7 @@
 <span class="sd">    Returns</span>
 <span class="sd">    -------</span>
 <span class="sd">    None</span>
-
 <span class="sd">    &quot;&quot;&quot;</span>
-
     <span class="c1"># Define the command to run Inkscape</span>
     <span class="n">command</span> <span class="o">=</span> <span class="p">[</span>
         <span class="s2">&quot;inkscape&quot;</span><span class="p">,</span>
@@ -103,11 +103,17 @@
     <span class="p">]</span>
 
     <span class="c1"># Add commands to hide all layers initially</span>
-    <span class="n">layers_hide</span> <span class="o">=</span> <span class="p">[</span><span class="sa">f</span><span class="s2">&quot;--select-by-id=</span><span class="si">{</span><span class="n">layer_id</span><span class="si">}</span><span class="s2"> --verb=LayerHide&quot;</span> <span class="k">for</span> <span class="n">layer_id</span> <span class="ow">in</span> <span class="n">get_all_layer_ids</span><span class="p">(</span><span class="n">svg_file</span><span class="p">)]</span>
+    <span class="n">layers_hide</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="sa">f</span><span class="s2">&quot;--select-by-id=</span><span class="si">{</span><span class="n">layer_id</span><span class="si">}</span><span class="s2"> --verb=LayerHide&quot;</span>
+        <span class="k">for</span> <span class="n">layer_id</span> <span class="ow">in</span> <span class="n">get_all_layer_ids</span><span class="p">(</span><span class="n">svg_file</span><span class="p">)</span>
+    <span class="p">]</span>
     <span class="n">command</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">layers_hide</span><span class="p">)</span>
 
     <span class="c1"># Add commands to show specific layers</span>
-    <span class="n">layers_show</span> <span class="o">=</span> <span class="p">[</span><span class="sa">f</span><span class="s2">&quot;--select-by-id=</span><span class="si">{</span><span class="n">layer_id</span><span class="si">}</span><span class="s2"> --verb=LayerShow&quot;</span> <span class="k">for</span> <span class="n">layer_id</span> <span class="ow">in</span> <span class="n">layers_to_include</span><span class="p">]</span>
+    <span class="n">layers_show</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="sa">f</span><span class="s2">&quot;--select-by-id=</span><span class="si">{</span><span class="n">layer_id</span><span class="si">}</span><span class="s2"> --verb=LayerShow&quot;</span>
+        <span class="k">for</span> <span class="n">layer_id</span> <span class="ow">in</span> <span class="n">layers_to_include</span>
+    <span class="p">]</span>
     <span class="n">command</span><span class="o">.</span><span class="n">extend</span><span class="p">(</span><span class="n">layers_show</span><span class="p">)</span>
 
     <span class="c1"># Add command to export</span>
@@ -121,9 +127,9 @@
 
 <div class="viewcode-block" id="get_all_layer_ids">
 <a class="viewcode-back" href="../../api/bg_mpl_stylesheets.html#bg_mpl_stylesheets.inkscape_tools.get_all_layer_ids">[docs]</a>
-<span class="k">def</span> <span class="nf">get_all_layer_ids</span><span class="p">(</span><span class="n">svg_file</span><span class="p">):</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    The layer IDs are the names of the layers, but this python script will return them all</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">get_all_layer_ids</span><span class="p">(</span><span class="n">svg_file</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;The layer IDs are the names of the layers, but this python script</span>
+<span class="sd">    will return them all.</span>
 
 <span class="sd">    Parameters</span>
 <span class="sd">    ----------</span>
@@ -133,9 +139,8 @@
 <span class="sd">    Returns</span>
 <span class="sd">    -------</span>
 <span class="sd">    The layer IDs as a list of strings</span>
-
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="kn">from</span> <span class="nn">xml.etree</span> <span class="kn">import</span> <span class="n">ElementTree</span> <span class="k">as</span> <span class="n">ET</span>
+    <span class="kn">from</span><span class="w"> </span><span class="nn">xml.etree</span><span class="w"> </span><span class="kn">import</span> <span class="n">ElementTree</span> <span class="k">as</span> <span class="n">ET</span>
 
     <span class="n">tree</span> <span class="o">=</span> <span class="n">ET</span><span class="o">.</span><span class="n">parse</span><span class="p">(</span><span class="n">svg_file</span><span class="p">)</span>
     <span class="n">root</span> <span class="o">=</span> <span class="n">tree</span><span class="o">.</span><span class="n">getroot</span><span class="p">()</span>
@@ -146,7 +151,10 @@
     <span class="n">layer_ids</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="k">for</span> <span class="n">layer</span> <span class="ow">in</span> <span class="n">root</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="s2">&quot;.//svg:g&quot;</span><span class="p">,</span> <span class="n">namespace</span><span class="p">):</span>
         <span class="nb">print</span><span class="p">(</span><span class="n">layer</span><span class="o">.</span><span class="n">attrib</span><span class="p">)</span>
-        <span class="k">if</span> <span class="s2">&quot;{http://www.inkscape.org/namespaces/inkscape}label&quot;</span> <span class="ow">in</span> <span class="n">layer</span><span class="o">.</span><span class="n">attrib</span><span class="p">:</span>
+        <span class="k">if</span> <span class="p">(</span>
+            <span class="s2">&quot;{http://www.inkscape.org/namespaces/inkscape}label&quot;</span>
+            <span class="ow">in</span> <span class="n">layer</span><span class="o">.</span><span class="n">attrib</span>
+        <span class="p">):</span>
             <span class="n">layer_ids</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">layer</span><span class="o">.</span><span class="n">attrib</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">])</span>
 
     <span class="k">return</span> <span class="n">layer_ids</span></div>
@@ -168,7 +176,7 @@
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2024, The Trustees of Columbia University in the City of New York.</p>
+    <p>&#169; Copyright 2026, The Contributor to the Billingegroup.bg-mpl-stylesheets project.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
