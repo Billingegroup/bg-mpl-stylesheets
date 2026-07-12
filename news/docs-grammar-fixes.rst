@@ -1,6 +1,6 @@
 **Added:**
 
-* <news item>
+* No news
 
 **Changed:**
 
