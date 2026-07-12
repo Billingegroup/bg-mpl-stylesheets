@@ -1,6 +1,6 @@
 **Added:**
 
-* No news
+* No news needed: typo fixes
 
 **Changed:**
 
