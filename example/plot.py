@@ -1,5 +1,7 @@
+from pathlib import Path
+
 import matplotlib.pyplot as plt
-from diffpy.utils.parsers.loaddata import loadData
+from diffpy.utils.parsers.loaddata import load_data
 
 from bg_mpl_stylesheets.styles import all_styles
 
@@ -8,7 +10,8 @@ from bg_mpl_stylesheets.styles import all_styles
 plt.style.use(all_styles["bg-style"])
 
 # load PDF data
-r, gcalc, dr, dg, gdiff = loadData("example/CdSe-data.fgr").T
+DATA_FILE = Path(__file__).parent / "CdSe-data.fgr"
+r, gcalc, dr, dg, gdiff = load_data(str(DATA_FILE)).T
 
 fig = plt.figure()
 ax = fig.add_subplot(1, 1, 1)

@@ -64,6 +64,10 @@ The following creates and activates a new environment named ``bg-mpl-stylesheets
         conda create -n bg-mpl-stylesheets_env bg-mpl-stylesheets
         conda activate bg-mpl-stylesheets_env
 
+To confirm that the installation was successful, type ::
+
+        python -c "import bg_mpl_stylesheets; print(bg_mpl_stylesheets.__version__)"
+
 The output should print the latest version displayed on the badges above.
 
 If the above does not work, you can use ``pip`` to download and install the latest release from
@@ -269,7 +273,11 @@ You may select a specific color to plot: ::
 Example code
 ------------
 
-You can also go to the ``example`` folder and run ``plot.py`` for testing. The example plot would be like this:
+You can also go to the ``example`` folder and run ``plot.py`` for testing. Running it requires installing the additional example dependencies::
+
+        pip install -r requirements/examples.txt
+
+The example plot would be like this:
 
 .. image:: example/plot.png
         :width: 600px
@@ -277,9 +285,11 @@ You can also go to the ``example`` folder and run ``plot.py`` for testing. The e
 Colors
 ------
 
-Run ``color_cycles.py`` to see the full color cycle of the bg-style:
+Run ``color_cycles.py`` to see the full color cycle of the bg-style, which also requires installing the additional example dependencies::
 
-.. image:: example/color_cycle.png
+        pip install -r requirements/examples.txt
+
+.. image:: example/color-cycle.png
         :width: 600px
 
 For full reference, please see matplotlib doc: https://matplotlib.org/stable/users/prev_whats_new/dflt_style_changes.html
