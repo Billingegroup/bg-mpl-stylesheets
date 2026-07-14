@@ -1,5 +1,5 @@
 import matplotlib.pyplot as plt
-from diffpy.utils.parsers.loaddata import loadData
+from diffpy.utils.parsers import load_data
 
 from bg_mpl_stylesheets.styles import use_style
 
@@ -8,7 +8,7 @@ from bg_mpl_stylesheets.styles import use_style
 use_style()
 
 # load PDF data
-r, gcalc, dr, dg, gdiff = loadData("example/CdSe_data.fgr").T
+r, gcalc, dr, dg, gdiff = load_data("example/CdSe-data.fgr").T
 
 fig = plt.figure()
 ax = fig.add_subplot(1, 1, 1)

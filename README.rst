@@ -36,7 +36,7 @@
 .. |Tracking| image:: https://img.shields.io/badge/issue_tracking-github-blue
         :target: https://github.com/Billingegroup/bg-mpl-stylesheets/issues
 
-A package for using Billinge group Matplotlib style files.
+A package for using Billinge group matplotlib style files.
 
 * bg-mpl-stylesheets is a Python software package that creates a standardized matplotlib figure format. This includes specialized fonts, figure border, color cycle, tick parameters, and more.
 
@@ -96,9 +96,9 @@ Getting Started
 
 ``matplotlib`` can accept a manually defined stylesheet file that is located remotely or locally.
 
-By default the package uses LaTeX fonts for mathematical symbols. This feature requires a Latex package on your computer.  It is not required for the use of the style-sheet but gives better results for things like angstrom symbols.  Matplotlib will look for your installed latex package, for example TeXLive or MikTex. If it can't find a latex package it will look for non-latex font replacements.
+By default the package uses LaTeX fonts for mathematical symbols. This feature requires a LaTeX package on your computer.  It is not required for the use of the stylesheet but gives better results for things like angstrom symbols.  Matplotlib will look for your installed LaTeX package, for example TeXLive or MikTex. If it can't find a LaTeX package it will look for non-LaTeX font replacements.
 
-To use the stylesheet, near the beginning your python script type ::
+To use the stylesheet, near the beginning your Python script type ::
 
         from bg_mpl_stylesheets.styles import use_style
         use_style()
@@ -107,9 +107,9 @@ To use another stylesheet by name, pass the style name to ``use_style()`` ::
 
         use_style("<style-name>")
 
-If you wish to use BillingeGroup stylesheet as the default style for all your plots, please follow these steps.
+If you wish to use Billinge group stylesheet as the default style for all your plots, please follow these steps.
 
-1. Use following commands to figure out which matplotlib config directory on your system: ::
+1. Use the following commands to figure out which matplotlib config directory on your system: ::
 
         import matplotlib
         config_dir = matplotlib.get_configdir()
@@ -119,13 +119,13 @@ If you wish to use BillingeGroup stylesheet as the default style for all your pl
 Overriding the default styles
 -----------------------------
 
-You can configure any matplotlib style parameter by updating its value in the ``rcParams`` dictionary dynamically in your python session, For example, by typing: ::
+You can configure any matplotlib style parameter by updating its value in the ``rcParams`` dictionary dynamically in your Python session. For example, by typing: ::
 
         plt.rcParams['figure.dpi'] = 180
         plt.rcParams['font.size'] = 18
         (... and so on)
 
-Not that the ``rcParams`` are global. It can get very confusing if these are updated everywhere in the code. It is much better to make local updates to their values by defining functions for your plots and using the ``@matplotlib.style.context()`` decorator, e.g., ::
+Note that the ``rcParams`` are global. It can get very confusing if these are updated everywhere in the code. It is much better to make local updates to their values by defining functions for your plots and using the ``@matplotlib.style.context()`` decorator, e.g., ::
 
         import matplotlib.pyplot as plt
 
@@ -231,7 +231,7 @@ You may select a specific color to plot from `Colors`: ::
 Color list
 ----------------
 
-Here are available colors in ``Colors``: ::
+Here are the available colors in ``Colors``: ::
 
     bg_blue = "#0B3C5D"
     bg_red = "#B82601"
@@ -250,7 +250,7 @@ Here are available colors in ``Colors``: ::
 Use a specific color to plot
 ----------------------------
 
-You may select the specific color to plot: ::
+You may select a specific color to plot: ::
 
         import matplotlib.pyplot as plt
         from bg_mpl_stylesheets.colors import Colors
@@ -286,7 +286,7 @@ For full reference, please see matplotlib doc: https://matplotlib.org/stable/use
 Support and Contribute
 ----------------------
 
-`Diffpy user group <https://groups.google.com/g/diffpy-users>`_ is the discussion forum for general questions and discussions about the use of bg-mpl-stylesheets. Please join the bg-mpl-stylesheets users community by joining the Google group. The bg-mpl-stylesheets project welcomes your expertise and enthusiasm!
+The `Diffpy user group <https://groups.google.com/g/diffpy-users>`_ is the discussion forum for general questions and discussions about the use of bg-mpl-stylesheets. Please join the bg-mpl-stylesheets users community via the Google group. The bg-mpl-stylesheets project welcomes your expertise and enthusiasm!
 
 If you see a bug or want to request a feature, please `report it as an issue <https://github.com/Billingegroup/bg-mpl-stylesheets/issues>`_ and/or `submit a fix as a PR <https://github.com/Billingegroup/bg-mpl-stylesheets/pulls>`_. You can also post it to the `Diffpy user group <https://groups.google.com/g/diffpy-users>`_.
 
@@ -316,7 +316,7 @@ Before contributing, please read our `Code of Conduct <https://github.com/Billin
 Contact
 -------
 
-For more information on bg-mpl-stylesheets please visit the project `web-page <https://Billingegroup.github.io/>`_ or email the maintainers ``Simon J.L. Billinge group(simon.billinge@gmail.com)``.
+For more information on bg-mpl-stylesheets please visit the project `web-page <https://Billingegroup.github.io/>`_ or email the maintainers, ``Simon J.L. Billinge group (sbillinge@ucsb.edu)``.
 
 Acknowledgements
 ----------------

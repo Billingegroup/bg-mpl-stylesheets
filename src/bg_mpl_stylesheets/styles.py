@@ -1,6 +1,7 @@
 from shutil import which
 
-from matplotlib import cycler, style as mpl_style
+from matplotlib import cycler
+from matplotlib import style as mpl_style
 
 bg_style = {
     ####################
