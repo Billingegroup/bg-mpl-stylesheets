@@ -11,39 +11,40 @@ def test_update_style_with_latex():
 
 
 def test_use_style_default(monkeypatch):
+    # UC1: use_style is called with no arguments.
+    # Expected: the default "bg-style" style is passed to Matplotlib.
     calls = []
-
-    def fake_use(style):
-        calls.append(style)
-
-    monkeypatch.setattr(styles.mpl_style, "use", fake_use)
-
+    monkeypatch.setattr(styles.mpl_style, "use", calls.append)
     styles.use_style()
-
-    assert calls == [styles.all_styles["bg-style"]]
+    actual = calls
+    expected = [styles.all_styles["bg-style"]]
+    assert actual == expected
 
 
 def test_use_style_valid_style(monkeypatch):
+    # UC2: use_style is called with a recognized style name.
+    # Expected: the requested style is passed to Matplotlib.
+    style_name = "bg-style"
     calls = []
-
     monkeypatch.setattr(styles.mpl_style, "use", calls.append)
+    styles.use_style(style_name)
+    actual = calls
+    expected = [styles.all_styles[style_name]]
+    assert actual == expected
 
-    styles.use_style("bg-style")
 
-    assert calls == [styles.all_styles["bg-style"]]
-
-
-def test_use_style_invalid_style():
-    invalid_style = "not-a-style"
+@pytest.mark.parametrize("invalid_style", ["not-a-style", None])
+def test_use_style_invalid_style(invalid_style):
+    # UC3: use_style is called with an unknown name or invalid value.
+    # Expected: ValueError explains the problem and lists valid styles.
     expected = (
         f"{invalid_style} is not a recognized style. "
         f"Please select from {list(styles.all_styles)}."
     )
-
     with pytest.raises(ValueError) as exc_info:
         styles.use_style(invalid_style)
-
-    assert str(exc_info.value) == expected
+    actual = str(exc_info.value)
+    assert actual == expected
 
 
 expected_style = {
