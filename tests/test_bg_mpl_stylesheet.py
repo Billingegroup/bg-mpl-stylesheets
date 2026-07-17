@@ -1,3 +1,5 @@
+import matplotlib as mpl
+import pytest
 from matplotlib import cycler
 
 from bg_mpl_stylesheets import styles
@@ -7,6 +9,31 @@ def test_update_style_with_latex():
     actual = styles.update_style_with_latex(styles.all_styles["bg-style"])
     expected = expected_style
     assert expected == actual
+
+
+@pytest.mark.parametrize("style_args", [(), ("bg-style",)])
+def test_use_style_valid_style(style_args):
+    # UC1: use_style is called with no arguments or a recognized style name.
+    # Expected: the selected style is applied to Matplotlib.
+    expected = styles.all_styles["bg-style"]
+    with mpl.rc_context():
+        styles.use_style(*style_args)
+        actual = {key: mpl.rcParams[key] for key in expected}
+    assert actual == expected
+
+
+@pytest.mark.parametrize("invalid_style", ["not-a-style", None])
+def test_use_style_invalid_style(invalid_style):
+    # UC2: use_style is called with an unknown name or invalid value.
+    # Expected: ValueError explains the problem and lists valid styles.
+    expected = (
+        f"{invalid_style} is not a recognized style. "
+        f"Please select from {list(styles.all_styles)}."
+    )
+    with pytest.raises(ValueError) as exc_info:
+        styles.use_style(invalid_style)
+    actual = str(exc_info.value)
+    assert actual == expected
 
 
 expected_style = {
