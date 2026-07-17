@@ -13,10 +13,9 @@ def test_update_style_with_latex():
 def test_use_style_default(monkeypatch):
     # UC1: use_style is called with no arguments.
     # Expected: the default "bg-style" style is passed to Matplotlib.
-    calls = []
-    monkeypatch.setattr(styles.mpl_style, "use", calls.append)
+    actual = []
+    monkeypatch.setattr(styles.mpl_style, "use", actual.append)
     styles.use_style()
-    actual = calls
     expected = [styles.all_styles["bg-style"]]
     assert actual == expected
 
@@ -25,10 +24,9 @@ def test_use_style_valid_style(monkeypatch):
     # UC2: use_style is called with a recognized style name.
     # Expected: the requested style is passed to Matplotlib.
     style_name = "bg-style"
-    calls = []
-    monkeypatch.setattr(styles.mpl_style, "use", calls.append)
+    actual = []
+    monkeypatch.setattr(styles.mpl_style, "use", actual.append)
     styles.use_style(style_name)
-    actual = calls
     expected = [styles.all_styles[style_name]]
     assert actual == expected
 

@@ -115,9 +115,7 @@ def use_style(style="bg-style"):
     Parameters
     ----------
     style : str, optional
-        Name of the style to apply. The default is ``"bg-style"``.
-        Available options are the keys in ``all_styles``. Currently,
-        ``"bg-style"`` is the only available option.
+        The name of the style to apply. The default is ``"bg-style"``.
 
     Raises
     ------
