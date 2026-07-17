@@ -1,3 +1,4 @@
+import matplotlib as mpl
 import pytest
 from matplotlib import cycler
 
@@ -10,30 +11,20 @@ def test_update_style_with_latex():
     assert expected == actual
 
 
-def test_use_style_default(monkeypatch):
-    # UC1: use_style is called with no arguments.
-    # Expected: the default "bg-style" style is passed to Matplotlib.
-    actual = []
-    monkeypatch.setattr(styles.mpl_style, "use", actual.append)
-    styles.use_style()
-    expected = [styles.all_styles["bg-style"]]
-    assert actual == expected
-
-
-def test_use_style_valid_style(monkeypatch):
-    # UC2: use_style is called with a recognized style name.
-    # Expected: the requested style is passed to Matplotlib.
-    style_name = "bg-style"
-    actual = []
-    monkeypatch.setattr(styles.mpl_style, "use", actual.append)
-    styles.use_style(style_name)
-    expected = [styles.all_styles[style_name]]
+@pytest.mark.parametrize("style_args", [(), ("bg-style",)])
+def test_use_style_valid_style(style_args):
+    # UC1: use_style is called with no arguments or a recognized style name.
+    # Expected: the selected style is applied to Matplotlib.
+    expected = styles.all_styles["bg-style"]
+    with mpl.rc_context():
+        styles.use_style(*style_args)
+        actual = {key: mpl.rcParams[key] for key in expected}
     assert actual == expected
 
 
 @pytest.mark.parametrize("invalid_style", ["not-a-style", None])
 def test_use_style_invalid_style(invalid_style):
-    # UC3: use_style is called with an unknown name or invalid value.
+    # UC2: use_style is called with an unknown name or invalid value.
     # Expected: ValueError explains the problem and lists valid styles.
     expected = (
         f"{invalid_style} is not a recognized style. "
