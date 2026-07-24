@@ -11,10 +11,18 @@ def test_update_style_with_latex():
     assert expected == actual
 
 
-@pytest.mark.parametrize("style_args", [(), ("bg-style",)])
+@pytest.mark.parametrize(
+    "style_args",
+    [
+        # Case 1: No input (default) is passed to use_style().
+        # Expected: "bg-style" is used.
+        (),
+        # Case 2: "bg-style" is passed to use_style().
+        # Expected: "bg-style" is used.
+        ("bg-style",),
+    ],
+)
 def test_use_style_valid_style(style_args):
-    # UC1: use_style is called with no arguments or a recognized style name.
-    # Expected: the selected style is applied to Matplotlib.
     expected = styles.all_styles["bg-style"]
     with mpl.rc_context():
         styles.use_style(*style_args)
@@ -22,10 +30,20 @@ def test_use_style_valid_style(style_args):
     assert actual == expected
 
 
-@pytest.mark.parametrize("invalid_style", ["not-a-style", None])
+@pytest.mark.parametrize(
+    "invalid_style",
+    [
+        # Case 1: An unknown style name is passed to use_style().
+        # Expected: ValueError explains the input is unrecognized
+        # and lists the valid styles.
+        "not-a-style",
+        # Case 2: None is passed to use_style().
+        # Expected: ValueError explains the input is unrecognized
+        # and lists the valid styles.
+        None,
+    ],
+)
 def test_use_style_invalid_style(invalid_style):
-    # UC2: use_style is called with an unknown name or invalid value.
-    # Expected: ValueError explains the problem and lists valid styles.
     expected = (
         f"{invalid_style} is not a recognized style. "
         f"Please select from {list(styles.all_styles)}."
