@@ -49,6 +49,23 @@ def rc_params_match(expected, actual, rel_tol=1e-5, abs_tol=1e-8):
     return True
 
 
+@pytest.mark.parametrize(
+    "rc_params_args",
+    [
+        # Case 1: An expected key is missing from the actual rcParams.
+        # Expected: The rcParams do not match.
+        [{"missing": 1}, {}, False],
+        # Case 2: Expected and actual sequences have different lengths.
+        # Expected: The rcParams do not match.
+        [{"items": [1, 2]}, {"items": [1]}, False],
+    ],
+)
+def test_rc_params_match_bad(rc_params_args):
+    actual = rc_params_match(rc_params_args[0], rc_params_args[1])
+    expected = rc_params_args[2]
+    assert actual == expected
+
+
 def test_update_style_with_latex():
     actual = update_style_with_latex(all_styles["bg-style"])
     expected = expected_style
