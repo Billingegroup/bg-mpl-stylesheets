@@ -284,7 +284,7 @@ The example plot would be like this:
 Colors
 ------
 
-Run ``color_cycles.py`` to see the full color cycle of the bg-style, 
+Run ``color_cycles.py`` to see the full color cycle of the bg-style,
 which also requires installing the additional example dependencies if you have not
 done so::
 
