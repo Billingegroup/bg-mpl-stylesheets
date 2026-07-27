@@ -1,6 +1,7 @@
 from shutil import which
 
 from matplotlib import cycler
+from matplotlib import style as mpl_style
 
 bg_style = {
     ####################
@@ -106,3 +107,24 @@ all_styles = {"bg-style": bg_style}
 
 for key, style in all_styles.items():
     all_styles.update({key: update_style_with_latex(style)})
+
+
+def use_style(style="bg-style"):
+    """Apply a bg-mpl-stylesheets Matplotlib style.
+
+    Parameters
+    ----------
+    style : str, optional
+        The name of the style to apply. The default is ``"bg-style"``.
+
+    Raises
+    ------
+    ValueError
+        If ``style`` is not a recognized style name.
+    """
+    if style not in all_styles:
+        raise ValueError(
+            f"{style} is not a recognized style. "
+            f"Please select from {list(all_styles)}."
+        )
+    mpl_style.use(all_styles[style])

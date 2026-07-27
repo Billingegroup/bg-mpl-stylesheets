@@ -1,12 +1,120 @@
+import math
+
+import matplotlib as mpl
+import pytest
 from matplotlib import cycler
 
-from bg_mpl_stylesheets import styles
+from bg_mpl_stylesheets.styles import (
+    all_styles,
+    update_style_with_latex,
+    use_style,
+)
+
+
+def values_are_close(expected_value, actual_value, rel_tol=1e-5, abs_tol=1e-8):
+    """Recursively compare two values."""
+    if isinstance(expected_value, bool) or isinstance(actual_value, bool):
+        return expected_value is actual_value
+    if isinstance(expected_value, (int, float)) and isinstance(
+        actual_value, (int, float)
+    ):
+        return math.isclose(
+            expected_value,
+            actual_value,
+            rel_tol=rel_tol,
+            abs_tol=abs_tol,
+        )
+    if isinstance(expected_value, (list, tuple)) and isinstance(
+        actual_value, (list, tuple)
+    ):
+        if len(expected_value) != len(actual_value):
+            return False
+        return all(
+            values_are_close(expected_item, actual_item, rel_tol, abs_tol)
+            for expected_item, actual_item in zip(expected_value, actual_value)
+        )
+    return expected_value == actual_value
+
+
+def rc_params_match(expected, actual, rel_tol=1e-5, abs_tol=1e-8):
+    """Return whether all expected rcParams match the actual values."""
+    for key, expected_value in expected.items():
+        if key not in actual:
+            return False
+        actual_value = actual[key]
+        if not values_are_close(
+            expected_value, actual_value, rel_tol, abs_tol
+        ):
+            return False
+    return True
+
+
+@pytest.mark.parametrize(
+    "rc_params_args",
+    [
+        # Case 1: An expected key is missing from the actual rcParams.
+        # Expected: The rcParams do not match.
+        [{"missing": 1}, {}, False],
+        # Case 2: Expected and actual sequences have different lengths.
+        # Expected: The rcParams do not match.
+        [{"items": [1, 2]}, {"items": [1]}, False],
+    ],
+)
+def test_rc_params_match_bad(rc_params_args):
+    actual = rc_params_match(rc_params_args[0], rc_params_args[1])
+    expected = rc_params_args[2]
+    assert actual == expected
 
 
 def test_update_style_with_latex():
-    actual = styles.update_style_with_latex(styles.all_styles["bg-style"])
+    actual = update_style_with_latex(all_styles["bg-style"])
     expected = expected_style
     assert expected == actual
+
+
+@pytest.mark.parametrize(
+    "style_args",
+    [
+        # Case 1: No input (default) is passed to use_style().
+        # Expected: "bg-style" is used.
+        [None, "bg-style"],
+        # Case 2: "bg-style" is passed to use_style().
+        # Expected: "bg-style" is used.
+        ["bg-style", "bg-style"],
+    ],
+)
+def test_use_style(style_args):
+    with mpl.rc_context():
+        if style_args[0] is None:
+            use_style()
+        else:
+            use_style(style_args[0])
+        actual = mpl.rcParams.copy()
+    expected = all_styles[style_args[1]]
+    assert rc_params_match(expected, actual)
+
+
+@pytest.mark.parametrize(
+    "style_args",
+    [
+        # Case 1: An unknown style name is passed to use_style().
+        # Expected: ValueError explains the input is unrecognized
+        # and lists the valid styles.
+        [
+            "not-a-style",
+            (
+                "not-a-style is not a recognized style. "
+                f"Please select from {list(all_styles)}."
+            ),
+        ],
+    ],
+)
+def test_use_style_bad(style_args):
+    with pytest.raises(ValueError) as exc_info:
+        use_style(style_args[0])
+    actual = str(exc_info.value)
+    expected = style_args[1]
+    assert actual == expected
 
 
 expected_style = {
