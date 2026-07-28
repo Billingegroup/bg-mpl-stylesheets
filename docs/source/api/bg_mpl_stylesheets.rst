@@ -44,3 +44,19 @@ bg_mpl_stylesheets.colors module
     :members:
     :undoc-members:
     :show-inheritance:
+
+bg_mpl_stylesheets.bg_mpl_stylesheets_app module
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. automodule:: bg_mpl_stylesheets.bg_mpl_stylesheets_app
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+bg_mpl_stylesheets.version module
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. automodule:: bg_mpl_stylesheets.version
+    :members:
+    :undoc-members:
+    :show-inheritance:
