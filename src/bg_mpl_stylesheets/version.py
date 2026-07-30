@@ -13,7 +13,13 @@
 # See LICENSE.rst for license information.
 #
 ##############################################################################
-"""Definition of __version__."""
+"""Definition of __version__.
+
+At build time, ``setuptools-git-versioning`` writes the version from the
+current git tag into the package metadata. At import time, this module
+reads that metadata via ``importlib.metadata`` and assigns it to
+__version__.
+"""
 
 #  We do not use the other three variables, but can be added back if needed.
 #  __all__ = ["__date__", "__git_commit__", "__timestamp__", "__version__"]
