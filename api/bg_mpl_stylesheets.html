@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>bg-mpl-stylesheets package &mdash; bg-mpl-stylesheets 0.6.0rc1 documentation</title>
+  <title>bg-mpl-stylesheets package &mdash; bg-mpl-stylesheets 0.6.0rc2 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
       <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
@@ -14,7 +14,7 @@
   
       <script src="../_static/jquery.js?v=5d32c60e"></script>
       <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="../_static/documentation_options.js?v=a48607a1"></script>
+      <script src="../_static/documentation_options.js?v=84379d4a"></script>
       <script src="../_static/doctools.js?v=fd6eb6e6"></script>
       <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
       <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
@@ -53,15 +53,20 @@
 <li class="toctree-l4"><a class="reference internal" href="#bg_mpl_stylesheets.inkscape_tools.get_all_layer_ids"><code class="docutils literal notranslate"><span class="pre">get_all_layer_ids()</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#bg-mpl-stylesheets-translate-module">bg_mpl_stylesheets.translate module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#module-bg_mpl_stylesheets.styles">bg_mpl_stylesheets.styles module</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#bg_mpl_stylesheets.styles.update_style_with_latex"><code class="docutils literal notranslate"><span class="pre">update_style_with_latex()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#bg_mpl_stylesheets.styles.use_style"><code class="docutils literal notranslate"><span class="pre">use_style()</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#module-bg_mpl_stylesheets.colors">bg_mpl_stylesheets.colors module</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#bg_mpl_stylesheets.colors.Colors"><code class="docutils literal notranslate"><span class="pre">Colors</span></code></a></li>
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="#module-bg_mpl_stylesheets.bg_mpl_stylesheets_app">bg_mpl_stylesheets.bg_mpl_stylesheets_app module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#bg_mpl_stylesheets.bg_mpl_stylesheets_app.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-bg_mpl_stylesheets.version">bg_mpl_stylesheets.version module</a></li>
 </ul>
 </li>
 </ul>
@@ -135,15 +140,26 @@ will return them all.</p>
 </dd></dl>
 
 </section>
-<section id="bg-mpl-stylesheets-translate-module">
-<h3>bg_mpl_stylesheets.translate module<a class="headerlink" href="#bg-mpl-stylesheets-translate-module" title="Link to this heading"></a></h3>
-</section>
 <section id="module-bg_mpl_stylesheets.styles">
 <span id="bg-mpl-stylesheets-styles-module"></span><h3>bg_mpl_stylesheets.styles module<a class="headerlink" href="#module-bg_mpl_stylesheets.styles" title="Link to this heading"></a></h3>
 <dl class="py function">
 <dt class="sig sig-object py" id="bg_mpl_stylesheets.styles.update_style_with_latex">
 <span class="sig-prename descclassname"><span class="pre">bg_mpl_stylesheets.styles.</span></span><span class="sig-name descname"><span class="pre">update_style_with_latex</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">style</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bg_mpl_stylesheets/styles.html#update_style_with_latex"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bg_mpl_stylesheets.styles.update_style_with_latex" title="Link to this definition"></a></dt>
 <dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="bg_mpl_stylesheets.styles.use_style">
+<span class="sig-prename descclassname"><span class="pre">bg_mpl_stylesheets.styles.</span></span><span class="sig-name descname"><span class="pre">use_style</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">style</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'bg-style'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bg_mpl_stylesheets/styles.html#use_style"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bg_mpl_stylesheets.styles.use_style" title="Link to this definition"></a></dt>
+<dd><p>Apply a bg-mpl-stylesheets Matplotlib style.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>style</strong> (<em>str</em><em>, </em><em>optional</em>) – The name of the style to apply. The default is <code class="docutils literal notranslate"><span class="pre">&quot;bg-style&quot;</span></code>.</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>ValueError</strong> – If <code class="docutils literal notranslate"><span class="pre">style</span></code> is not a recognized style name.</p>
+</dd>
+</dl>
+</dd></dl>
 
 </section>
 <section id="module-bg_mpl_stylesheets.colors">
@@ -224,6 +240,26 @@ will return them all.</p>
 
 </dd></dl>
 
+</section>
+<section id="module-bg_mpl_stylesheets.bg_mpl_stylesheets_app">
+<span id="bg-mpl-stylesheets-bg-mpl-stylesheets-app-module"></span><h3>bg_mpl_stylesheets.bg_mpl_stylesheets_app module<a class="headerlink" href="#module-bg_mpl_stylesheets.bg_mpl_stylesheets_app" title="Link to this heading"></a></h3>
+<p>Command-line entry point for bg-mpl-stylesheets.</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="bg_mpl_stylesheets.bg_mpl_stylesheets_app.main">
+<span class="sig-prename descclassname"><span class="pre">bg_mpl_stylesheets.bg_mpl_stylesheets_app.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/bg_mpl_stylesheets/bg_mpl_stylesheets_app.html#main"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#bg_mpl_stylesheets.bg_mpl_stylesheets_app.main" title="Link to this definition"></a></dt>
+<dd><p>Run the bg-mpl-stylesheets command-line interface.</p>
+<p>Supports <code class="docutils literal notranslate"><span class="pre">--version</span></code> to print the installed package version. With
+no arguments, prints the help message.</p>
+</dd></dl>
+
+</section>
+<section id="module-bg_mpl_stylesheets.version">
+<span id="bg-mpl-stylesheets-version-module"></span><h3>bg_mpl_stylesheets.version module<a class="headerlink" href="#module-bg_mpl_stylesheets.version" title="Link to this heading"></a></h3>
+<p>Definition of __version__.</p>
+<p>At build time, <code class="docutils literal notranslate"><span class="pre">setuptools-git-versioning</span></code> writes the version from the
+current git tag into the package metadata. At import time, this module
+reads that metadata via <code class="docutils literal notranslate"><span class="pre">importlib.metadata</span></code> and assigns it to
+__version__.</p>
 </section>
 </section>
 </section>
