@@ -1,9 +1,16 @@
+"""Command-line entry point for bg-mpl-stylesheets."""
+
 import argparse
 
 from bg_mpl_stylesheets.version import __version__  # noqa
 
 
 def main():
+    """Run the bg-mpl-stylesheets command-line interface.
+
+    Supports ``--version`` to print the installed package version. With
+    no arguments, prints the help message.
+    """
     parser = argparse.ArgumentParser(
         prog="bg-mpl-stylesheets",
         description=(
