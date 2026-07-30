@@ -21,14 +21,6 @@ bg_mpl_stylesheets.inkscape_tools module
     :undoc-members:
     :show-inheritance:
 
-bg_mpl_stylesheets.translate module
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-.. automodule:: bg_mpl_stylesheets.translate
-    :members:
-    :undoc-members:
-    :show-inheritance:
-
 bg_mpl_stylesheets.styles module
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
