@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Release notes &mdash; bg-mpl-stylesheets 0.6.0rc2 documentation</title>
+  <title>Release notes &mdash; bg-mpl-stylesheets 0.6.0 documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
       <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
@@ -14,7 +14,7 @@
   
       <script src="_static/jquery.js?v=5d32c60e"></script>
       <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="_static/documentation_options.js?v=84379d4a"></script>
+      <script src="_static/documentation_options.js?v=dda85ae5"></script>
       <script src="_static/doctools.js?v=fd6eb6e6"></script>
       <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
       <script src="_static/clipboard.min.js?v=a7894cd8"></script>
@@ -48,15 +48,16 @@
               <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="api/bg_mpl_stylesheets.html">Package API</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Release notes</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#id1">0.5.1</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id2">0.5.0</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id3">0.4.2</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id4">0.3.2</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id5">0.3.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id1">0.6.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">0.5.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">0.5.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id4">0.4.2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id5">0.3.2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id6">0.3.1</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#v0-1-0">v0.1.0</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id6">0.4.0</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#id7">0.4.0</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id8">0.4.1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id8">0.4.0</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id9">0.4.1</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
@@ -89,15 +90,44 @@
   <section id="release-notes">
 <span id="index-0"></span><h1>Release notes<a class="headerlink" href="#release-notes" title="Link to this heading"></a></h1>
 <section id="id1">
-<h2>0.5.1<a class="headerlink" href="#id1" title="Link to this heading"></a></h2>
+<h2>0.6.0<a class="headerlink" href="#id1" title="Link to this heading"></a></h2>
+<p><strong>Added:</strong></p>
+<ul class="simple">
+<li><p>Added support for Python 3.14</p></li>
+<li><p>Added <code class="docutils literal notranslate"><span class="pre">use_style()</span></code> as a convenience helper for applying Billinge group Matplotlib styles.</p></li>
+</ul>
+<p><strong>Changed:</strong></p>
+<ul class="simple">
+<li><p>&lt;news item&gt;</p></li>
+</ul>
+<p><strong>Deprecated:</strong></p>
+<ul class="simple">
+<li><p>&lt;news item&gt;</p></li>
+</ul>
+<p><strong>Fixed:</strong></p>
+<ul class="simple">
+<li><p>Fixed <cite>plot.py</cite> example script to resolve the data file path relative to</p></li>
+</ul>
+<p>the script location instead of the current working directory, so it
+works regardless of where it’s run from.
+* Fixed latex preamble syntax error due to matplotlib update.
+*  Updated project to the latest scikit-package template
+* Added missing API doc entries for bg_mpl_stylesheets_app and version submodules.</p>
+<p><strong>Removed:</strong></p>
+<ul class="simple">
+<li><p>Removed support for Python 3.11</p></li>
+</ul>
+</section>
+<section id="id2">
+<h2>0.5.1<a class="headerlink" href="#id2" title="Link to this heading"></a></h2>
 <p><strong>Added:</strong></p>
 <ul class="simple">
 <li><p>Spelling check via Codespell in pre-commit</p></li>
 <li><p>Coverage report in each PR</p></li>
 </ul>
 </section>
-<section id="id2">
-<h2>0.5.0<a class="headerlink" href="#id2" title="Link to this heading"></a></h2>
+<section id="id3">
+<h2>0.5.0<a class="headerlink" href="#id3" title="Link to this heading"></a></h2>
 <p><strong>Added:</strong></p>
 <ul class="simple">
 <li><p>Support for python 3.13</p></li>
@@ -108,8 +138,8 @@
 <li><p>distutils module, as deprecated in Python 3.13</p></li>
 </ul>
 </section>
-<section id="id3">
-<h2>0.4.2<a class="headerlink" href="#id3" title="Link to this heading"></a></h2>
+<section id="id4">
+<h2>0.4.2<a class="headerlink" href="#id4" title="Link to this heading"></a></h2>
 <p><strong>Fixed:</strong></p>
 <ul class="simple">
 <li><p>Another recut to include issue templates</p></li>
@@ -119,8 +149,8 @@
 <li><p>add matplotlib to pip.txt, maintain matplotlib-base in conda.txt</p></li>
 </ul>
 </section>
-<section id="id4">
-<h2>0.3.2<a class="headerlink" href="#id4" title="Link to this heading"></a></h2>
+<section id="id5">
+<h2>0.3.2<a class="headerlink" href="#id5" title="Link to this heading"></a></h2>
 <p><strong>Changed:</strong></p>
 <ul class="simple">
 <li><p>key name in the style dictionary from all_styles[“bg_style”] to all_styles[“bg-style”]</p></li>
@@ -130,8 +160,8 @@
 <li><p>URLs referring to the organization in README.md</p></li>
 </ul>
 </section>
-<section id="id5">
-<h2>0.3.1<a class="headerlink" href="#id5" title="Link to this heading"></a></h2>
+<section id="id6">
+<h2>0.3.1<a class="headerlink" href="#id6" title="Link to this heading"></a></h2>
 <p><strong>Added:</strong></p>
 <ul class="simple">
 <li><p>inskape_tools.py module with python helper functions for scripting inkscape tasks</p></li>
@@ -162,8 +192,8 @@
 <li><p>Rever version bump patterns</p></li>
 </ul>
 </section>
-<section id="id6">
-<h2>0.4.0<a class="headerlink" href="#id6" title="Link to this heading"></a></h2>
+<section id="id7">
+<h2>0.4.0<a class="headerlink" href="#id7" title="Link to this heading"></a></h2>
 <p><strong>Added:</strong></p>
 <ul class="simple">
 <li><p><cite>Colors</cite> enum for choosing  a bg color by name</p></li>
@@ -177,11 +207,11 @@
 <li><p>Capitalized the hex color codes</p></li>
 </ul>
 </section>
-<section id="id7">
-<h2>0.4.0<a class="headerlink" href="#id7" title="Link to this heading"></a></h2>
-</section>
 <section id="id8">
-<h2>0.4.1<a class="headerlink" href="#id8" title="Link to this heading"></a></h2>
+<h2>0.4.0<a class="headerlink" href="#id8" title="Link to this heading"></a></h2>
+</section>
+<section id="id9">
+<h2>0.4.1<a class="headerlink" href="#id9" title="Link to this heading"></a></h2>
 <p><strong>Added:</strong></p>
 <ul class="simple">
 <li><p>Columbia blue (#B9D9EB) as columbia_blue in Colors</p></li>
