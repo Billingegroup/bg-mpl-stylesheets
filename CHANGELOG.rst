@@ -4,6 +4,36 @@ Release notes
 
 .. current developments
 
+0.6.0
+=====
+
+**Added:**
+
+* Added support for Python 3.14
+* Added ``use_style()`` as a convenience helper for applying Billinge group Matplotlib styles.
+
+**Changed:**
+
+*  <news item>
+
+**Deprecated:**
+
+*  <news item>
+
+**Fixed:**
+
+* Fixed `plot.py` example script to resolve the data file path relative to
+the script location instead of the current working directory, so it
+works regardless of where it's run from.
+* Fixed latex preamble syntax error due to matplotlib update.
+*  Updated project to the latest scikit-package template
+* Added missing API doc entries for bg_mpl_stylesheets_app and version submodules.
+
+**Removed:**
+
+* Removed support for Python 3.11
+
+
 0.5.1
 =====
 
