@@ -4,6 +4,15 @@ Release notes
 
 .. current developments
 
+0.6.1
+=====
+
+**Fixed:**
+
+* Fixed incorrect script entry point in `pyproject.toml` that caused `bg-mpl-stylesheets -h`
+and `bg-mpl-stylesheets --version` to print the raw launcher script instead of running.
+
+
 0.6.0
 =====
 
